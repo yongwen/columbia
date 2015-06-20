@@ -1,0 +1,9 @@
+//CHAIN query #3
+
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          )

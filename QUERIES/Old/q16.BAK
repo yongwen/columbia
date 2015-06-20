@@ -1,0 +1,41 @@
+(ORDER_BY(.CNT, P.PB, P.PT, P.PS),
+	(PROJECT(P.PB, P.PT, P.PS, .CNT),
+		(AGG_LIST((PS.PSPK AS CNT), (GROUP_BY <P.PB, P.PT, P.PS>)),
+			(EQJOIN(PS.PSSK, S.SSK),
+				(EQJOIN(PS.PSPK, P.PPK),
+					(SELECT,
+						GET("P"),
+						(OP_AND,
+							(OP_AND,
+								(OP_NE,
+									ATTR("P.PB"),
+									STR("SBRAND")
+								),
+								(OP_NOT,
+									(OP_LIKE,
+										ATTR("P.PT"),
+										STR("STYPE")
+									)
+								)
+							),
+							(OP_IN,
+								ATTR("P.PS"),
+								SET("SIZE1, SIZE2, SIZE3, SIZE4, SIZE5, SIZE6, SIZE7, SIZE8")
+							)
+						)
+					),
+					GET("PS")
+				),
+				(SELECT,
+					GET("S"),
+					(OP_NOT,
+						(OP_LIKE,
+							ATTR("S.SC"),
+							STR("SBBB")
+						)
+					)
+				)
+			)
+		)
+	)
+)

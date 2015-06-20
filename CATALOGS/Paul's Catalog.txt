@@ -1,0 +1,279 @@
+RelName: A
+Card: 3162
+UCard: 3162
+Width: 0.01
+Order: sorted
+OrderKey: (W)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+W           real_t      316           316    0
+X           real_t      316           316    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+A_X                  (X)                  btree
+
+RelName: B
+Card: 2683
+UCard: 2683
+Width: 0.01
+Order: sorted
+OrderKey: (X)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+X           real_t      316           316    0
+Y           real_t      316           316    0
+ 
+RelName: C
+Card: 2276
+UCard: 2276
+Width: 0.01
+Order: sorted
+OrderKey: (Y)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Y           real_t      316           316    0
+Z           real_t      316           316    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+C_Z                  (Z)                  btree
+ 
+RelName: D
+Card: 1931
+UCard: 1931
+Width: 0.01
+Order: sorted
+OrderKey: (Z)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Z           real_t      316           316    0
+A           real_t      316           316    0
+ 
+RelName: E
+Card: 1638
+UCard: 1638
+Width: 0.01
+Order: sorted
+OrderKey: (A)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A           real_t      316           316    0
+B           real_t      316           316    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+E_B                  (B)                  btree
+ 
+RelName: F
+Card: 1389
+UCard: 1389
+Width: 0.01
+Order: sorted
+OrderKey: (B)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+B           real_t      316           316    0
+C           real_t      316           316    0
+ 
+RelName: G
+Card: 1179
+UCard: 1179
+Width: 0.01
+Order: sorted
+OrderKey: (C)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+C           real_t      316           316    0
+D           real_t      316           316    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+G_D                  (D)                  btree
+ 
+RelName: H
+Card: 1000
+UCard: 1000
+Width: 0.01
+Order: sorted
+OrderKey: (D)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+D           real_t      316           316    0
+E           real_t      316           316    0
+ 
+RelName: I
+Card: 848
+UCard: 848
+Width: 0.01
+Order: sorted
+OrderKey: (E)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+E           real_t      316           316    0
+F           real_t      316           316    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+I_F                  (F)                  btree
+ 
+RelName: J
+Card: 720
+UCard: 720
+Width: 0.01
+Order: sorted
+OrderKey: (F)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+F           real_t      316           316    0
+G           real_t      316           316    0
+ 
+RelName: APrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (W)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+W           real_t      316           316    0
+X           real_t      316           316    0
+
+RelName: BPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (X)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+X           real_t      316           316    0
+Y           real_t      316           316    0
+ 
+RelName: CPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (Y)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Y           real_t      316           316    0
+Z           real_t      316           316    0
+
+ 
+RelName: DPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (Z)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Z           real_t      316           316    0
+A           real_t      316           316    0
+ 
+RelName: EPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (A)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A           real_t      316           316    0
+B           real_t      316           316    0
+
+ 
+RelName: FPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (B)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+B           real_t      316           316    0
+C           real_t      316           316    0
+ 
+RelName: GPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (C)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+C           real_t      316           316    0
+D           real_t      316           316    0
+
+ 
+RelName: HPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (D)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+D           real_t      316           316    0
+E           real_t      316           316    0
+ 
+RelName: IPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (E)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+E           real_t      316           316    0
+F           real_t      316           316    0
+
+ 
+RelName: JPrime
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (F)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+F           real_t      316           316    0
+G           real_t      316           316    0
+ 

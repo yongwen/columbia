@@ -1,0 +1,33 @@
+//model D query 3
+(ORDER_BY (.REV, O.OD),
+  (PROJECT (L.LOK, .REV, O.OD, O.OS),
+    ( AGG_LIST ((<L.LD, L.LE> AS REV), (GROUP_BY <L.LOK, O.OS, O.OD>)),
+       (EQJOIN(L.LOK, O.OOK),
+	  (SELECT,
+	     GET("L"),
+	     (OP_GT,
+	       ATTR ("L.LS"),
+	       INT("1998")
+	     )
+	  ),
+  	  (EQJOIN(O.OCK, C.CCK),
+	     (SELECT,
+   	       GET("O"),
+	       (OP_LT,
+	         ATTR ("O.OD"),
+	         INT("1998")
+	       )
+             ),
+	     (SELECT,
+   	       GET("C"),
+	       (OP_EQ,
+	         ATTR ("C.CM"),
+	         INT("XXX")
+	       )
+             )
+	  )
+       )
+    )
+  )
+)
+

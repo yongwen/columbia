@@ -1,0 +1,126 @@
+// 4 10-join Queries linked by DUMMYs
+
+
+(DUMMY,
+
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (APrime.X,B.X), 
+                              GET ("APrime"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+)
+,
+
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (BPrime.Y,C.Y), 
+                            (EQJOIN (A.X,BPrime.X), 
+                              GET ("A"), 
+                              GET ("BPrime") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(CPrime.Z,D.Z), 
+                          (EQJOIN (B.Y,CPrime.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("CPrime") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+)
+)

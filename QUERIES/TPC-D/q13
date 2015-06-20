@@ -1,0 +1,26 @@
+(ORDER_BY(.YEAR),
+	(PROJECT(.SUM_REV, .YEAR),
+		(AGG_LIST((.REV AS SUM_REV), (GROUP_BY .YEAR)),
+			(FUNC_OP(O.OD AS YEAR),
+				(EQJOIN(L.LOK, O.OOK),
+					(FUNC_OP(<L.LD, L.LE> AS REV),
+						(SELECT,
+							GET("L"),
+							(OP_EQ,
+								ATTR("L.LR"),
+								STR("R")
+							)
+						)
+					),
+					(SELECT,
+						GET("O"),
+						(OP_EQ,
+							ATTR("O.O_CLERK"),
+							STR("SCLERK")
+						)
+					)
+				)
+			)
+		)
+	)
+)

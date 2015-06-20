@@ -1,0 +1,64 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 08:58:35 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 08:44: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 497823.096 millisecond
+    Time outside of functions: 492925.708 millisecond
+    Call depth: 5
+    Total functions: 47
+    Total hits: 6567746
+    Function coverage: 78.7%
+    Overhead Calculated 16
+    Overhead Average 16
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 4897.388 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 47
+    Hits in module: 6567746
+    Module function coverage: 78.7%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+    4414.907  90.1     4128.160  84.3    63254 M_EXPR::`scalar deleting destructor'(unsigned int) (group.obj)
+     317.415   6.5      297.742   6.1      511 GROUP::GROUP(class M_EXPR *) (group.obj)
+      75.042   1.5       75.042   1.5   144348 COST::operator new(unsigned int) (group.obj)
+      56.852   1.2       60.619   1.2     1021 CArray<class WINNER *,class WINNER *>::SetSize(int,int) (group.obj)
+      14.776   0.3       14.807   0.3     1069 WINNER::`scalar deleting destructor'(unsigned int) (group.obj)
+      12.901   0.3       14.376   0.3      511 CArray<class WINNER *,class WINNER *>::~CArray<class WINNER *,class WINNER *>(void) (group.obj)
+       4.517   0.1        4.517   0.1     1021 ConstructElements(class WINNER * *,int) (group.obj)
+       0.934   0.0        0.934   0.0     2553 CArray<class WINNER *,class WINNER *>::AssertValid(void) (group.obj)
+       0.044   0.0        0.044   0.0      511 DestructElements(class WINNER * *,int) (group.obj)
+       0.000   0.0        0.000   0.0   394979 CArray<class GROUP *,class GROUP *>::ElementAt(int) (group.obj)
+       0.000   0.0        0.000   0.0   394979 CArray<class GROUP *,class GROUP *>::operator[](int) (group.obj)
+       0.000   0.0        0.000   0.0      511 CArray<class WINNER *,class WINNER *>::CArray<class WINNER *,class WINNER *>(void) (group.obj)
+       0.000   0.0        0.000   0.0   316226 CArray<class WINNER *,class WINNER *>::ElementAt(int) (group.obj)
+       0.000   0.0        0.000   0.0   130095 CArray<class WINNER *,class WINNER *>::GetSize(void) (group.obj)
+       0.000   0.0        0.000   0.0   316226 CArray<class WINNER *,class WINNER *>::operator[](int) (group.obj)
+       0.000   0.0        0.000   0.0   429686 COST::COST(double) (group.obj)
+       0.000   0.0        0.000   0.0    72724 COST::`scalar deleting destructor'(unsigned int) (group.obj)
+       0.000   0.0        0.000   0.0    72724 COST::operator delete(void *,unsigned int) (group.obj)
+       0.000   0.0        0.000   0.0   358740 COST::~COST(void) (group.obj)
+       0.000   0.0        0.000   0.0    54361 GROUP::NewMExpr(class M_EXPR *) (group.obj)
+       0.000   0.0        0.000   0.0      511 GROUP::init_state(void) (group.obj)
+       0.000   0.0        0.000   0.0     1021 GROUP::set_optimized(bool) (group.obj)
+       0.000   0.0     3049.441  62.3      511 GROUP::~GROUP(void) (group.obj)
+       0.000   0.0        0.000   0.0   187790 M_EXPR::GetArity(void) (group.obj)
+       0.000   0.0        0.000   0.0   317829 M_EXPR::GetGrpID(void) (group.obj)
+       0.000   0.0        0.000   0.0   510884 M_EXPR::GetInput(int) (group.obj)
+       0.000   0.0        0.000   0.0   340505 M_EXPR::GetNextMExpr(void) (group.obj)
+       0.000   0.0        0.000   0.0  1641976 M_EXPR::GetOp(void) (group.obj)
+       0.000   0.0        0.000   0.0    53850 M_EXPR::SetNextMExpr(class M_EXPR *) (group.obj)
+       0.000   0.0        0.000   0.0    63254 M_EXPR::operator delete(void *,unsigned int) (group.obj)
+       0.000   0.0        0.000   0.0     3439 SET_TRACE::SET_TRACE(bool) (group.obj)
+       0.000   0.0        0.000   0.0     3439 SET_TRACE::~SET_TRACE(void) (group.obj)
+       0.000   0.0        0.000   0.0   393957 SSP::GetGroup(int) (group.obj)
+       0.000   0.0        0.000   0.0    53463 WINNER::GetCost(void) (group.obj)
+       0.000   0.0        0.000   0.0    48542 WINNER::GetMPlan(void) (group.obj)
+       0.000   0.0        0.000   0.0   189656 WINNER::GetPhysProp(void) (group.obj)
+       0.000   0.0        0.030   0.0     1069 WINNER::~WINNER(void) (group.obj)

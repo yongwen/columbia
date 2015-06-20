@@ -1,0 +1,344 @@
+(Dummy,
+
+(DUMMY,
+(DUMMY,
+
+(DUMMY,
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (APrime.X,B.X), 
+                              GET ("APrime"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+)
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (BPrime.Y,C.Y), 
+                            (EQJOIN (A.X,BPrime.X), 
+                              GET ("A"), 
+                              GET ("BPrime") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(CPrime.Z,D.Z), 
+                          (EQJOIN (B.Y,CPrime.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("CPrime") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(DPrime.A,E.A), 
+                        (EQJOIN(C.Z,DPrime.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("DPrime")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+)
+)
+,
+
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(EPrime.B,F.B), 
+                      (EQJOIN(D.A,EPrime.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("EPrime")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(FPrime.C,G.C), 
+                    (EQJOIN(E.B,FPrime.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("FPrime") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+)
+)
+
+(DUMMY,
+
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(GPrime.D,H.D), 
+                  (EQJOIN(F.C,GPrime.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("GPrime")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(HPrime.E,I.E), 
+                (EQJOIN(G.D,HPrime.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("HPrime")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+)
+,
+
+(DUMMY,
+            (EQJOIN(IPrime.F,J.F), 
+              (EQJOIN(H.E,IPrime.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("IPrime")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(I.F,JPrime.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("JPrime")
+            )
+)
+)
+
+)

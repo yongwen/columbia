@@ -1,0 +1,7 @@
+                          (EQJOIN (E.A,D.A), 
+                            (EQJOIN (E.B,F.B), 
+                              GET ("E"), 
+                              GET ("F") 
+                            ),
+                            GET ("D") 
+                          )

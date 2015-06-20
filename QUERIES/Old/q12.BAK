@@ -1,0 +1,42 @@
+(AGG_LIST((O.OP AS LINE_COUNT), (GROUP_BY L.LSM)),
+	(EQJOIN(O.OOK, L.LOK),
+		GET("O"),
+		(SELECT,
+			GET("L"),
+			(OP_AND,
+				(OP_AND,
+					(OP_AND,
+						(OP_AND,
+							(OP_GE,
+								ATTR("L.LRD"),
+								INT("1000")
+							),
+							(OP_LT,
+								ATTR("L.LRD"),
+								ATTR("1365")
+							)
+						),
+						(OP_LT,
+							ATTR("L.LSD"),
+							ATTR("L.LCD")
+						)
+					),
+					(OP_LT,
+						ATTR("L.LCD"),
+						ATTR("L.LRD")
+					)
+				),
+				(OP_OR,
+					(OP_EQ,
+						ATTR("L.LSM"),
+						STR("MODE1")
+					),
+					(OP_EQ,
+						ATTR("L.LSM"),
+						STR("MODE2")
+					)
+				)
+			)
+		)
+	)
+)

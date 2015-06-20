@@ -1,0 +1,60 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 09:10:55 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 09:01: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 531438.847 millisecond
+    Time outside of functions: 444494.759 millisecond
+    Call depth: 12
+    Total functions: 53
+    Total hits: 615883
+    Function coverage: 62.3%
+    Overhead Calculated 9
+    Overhead Average 9
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 86944.087 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 53
+    Hits in module: 615883
+    Module function coverage: 62.3%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+   65643.609  75.5    80269.360  92.3        1 SSP::optimize(void) (ssp.obj)
+   10052.410  11.6    13209.817  15.2    63206 SSP::CopyIn(class EXPR *,int &) (ssp.obj)
+    6275.742   7.2     6279.168   7.2      511 GROUP::`scalar deleting destructor'(unsigned int) (ssp.obj)
+    2446.390   2.8     2465.634   2.8    27003 SSP::FindDup(class M_EXPR &) (ssp.obj)
+    1051.866   1.2     1051.866   1.2   127494 GROUP::GetWinner(class PHYS_PROP *) (ssp.obj)
+     564.856   0.6      564.856   0.6    63254 M_EXPR::operator new(unsigned int) (ssp.obj)
+     271.143   0.3      271.223   0.3        9 SSP::CopyOut(int,class PHYS_PROP *,int) (ssp.obj)
+     236.803   0.3      756.209   0.9    50526 GROUP::search_circle(class CONT *,bool &) (ssp.obj)
+      82.081   0.1       82.081   0.1     1021 CArray<class WINNER *,class WINNER *>::SetAtGrow(int,class WINNER *) (ssp.obj)
+      69.081   0.1       69.081   0.1   120379 CONT::GetUpperBd(void) (ssp.obj)
+      54.895   0.1       54.895   0.1    55941 GROUP::set_changed(bool) (ssp.obj)
+      50.305   0.1       50.305   0.1      511 GROUP::operator new(unsigned int) (ssp.obj)
+      42.074   0.0      135.780   0.2     1069 GROUP::NewWinner(class PHYS_PROP *,class M_EXPR *,class COST *,bool) (ssp.obj)
+      28.153   0.0       28.153   0.0    54361 M_EXPR::set_rule_mask(unsigned int) (ssp.obj)
+      16.011   0.0       22.285   0.0      503 CArray<class GROUP *,class GROUP *>::SetSize(int,int) (ssp.obj)
+      14.530   0.0       14.530   0.0    25482 M_EXPR::GetNextHash(void) (ssp.obj)
+       7.977   0.0        8.178   0.0     1069 WINNER::WINNER(class M_EXPR *,class PHYS_PROP *,class COST *,bool) (ssp.obj)
+       5.038   0.0     6285.248   7.2        1 SSP::~SSP(void) (ssp.obj)
+       4.713   0.0        4.713   0.0    11300 M_EXPR::SetNextHash(class M_EXPR *) (ssp.obj)
+       4.216   0.0        4.216   0.0     5239 COST::operator>=(class COST const &) (ssp.obj)
+       3.949   0.0        4.469   0.0        1 SSP::SSP(void) (ssp.obj)
+       3.426   0.0        3.426   0.0      511 GROUP::operator delete(void *,unsigned int) (ssp.obj)
+       3.331   0.0        3.331   0.0     2415 GROUP::is_optimized(void) (ssp.obj)
+       3.168   0.0        3.168   0.0      504 CArray<class GROUP *,class GROUP *>::AssertValid(void) (ssp.obj)
+       3.117   0.0        3.117   0.0      503 ConstructElements(class GROUP * *,int) (ssp.obj)
+       2.209   0.0       84.290   0.1     1021 CArray<class WINNER *,class WINNER *>::Add(class WINNER *) (ssp.obj)
+       1.130   0.0        1.130   0.0     1023 CArray<class GROUP *,class GROUP *>::GetSize(void) (ssp.obj)
+       0.596   0.0        0.596   0.0      511 GROUP::GetGroupID(void) (ssp.obj)
+       0.565   0.0        0.565   0.0      510 GROUP::GetFirstPhysMExpr(void) (ssp.obj)
+       0.520   0.0        0.520   0.0        1 CArray<class GROUP *,class GROUP *>::CArray<class GROUP *,class GROUP *>(void) (ssp.obj)
+       0.124   0.0        0.187   0.0        1 CArray<class GROUP *,class GROUP *>::~CArray<class GROUP *,class GROUP *>(void) (ssp.obj)
+       0.052   0.0        0.052   0.0        1 DestructElements(class GROUP * *,int) (ssp.obj)
+       0.006   0.0      113.788   0.1        1 SSP::Init(void) (ssp.obj)

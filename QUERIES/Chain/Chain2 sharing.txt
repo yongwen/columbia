@@ -1,0 +1,7 @@
+//CHAIN query #2 for sharing
+
+
+                            (EQJOIN (L.H,B.X), 
+                              GET ("L"), 
+                              GET ("B") 
+                            )

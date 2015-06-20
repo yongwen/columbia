@@ -1,0 +1,74 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 10:18:10 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 10:08: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 508810.743 millisecond
+    Time outside of functions: 499015.206 millisecond
+    Call depth: 5
+    Total functions: 86
+    Total hits: 1469961
+    Function coverage: 54.7%
+    Overhead Calculated 9
+    Overhead Average 9
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 9795.537 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 86
+    Hits in module: 1469961
+    Module function coverage: 54.7%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+    7548.823  77.1     7548.823  77.1   343938 CopyArray(int *,int) (supp.obj)
+     741.290   7.6      741.290   7.6     7591 PHYS_PROP::PHYS_PROP(class PHYS_PROP &) (supp.obj)
+     222.387   2.3      222.387   2.3    52869 SCHEMA::InSchema(int) (supp.obj)
+     219.295   2.2      219.295   2.2   156540 lookup2(unsigned long,unsigned long) (supp.obj)
+     211.493   2.2      363.589   3.7    76728 COST::FinalCost(class COST *,class COST * *,int) (supp.obj)
+     101.996   1.0      101.996   1.0   151782 COST::operator+=(class COST const &) (supp.obj)
+      91.080   0.9       91.080   0.9    64493 bit_on(unsigned int &,int) (supp.obj)
+      85.285   0.9       86.485   0.9      502 SCHEMA::UnionSchema(class SCHEMA *) (supp.obj)
+      83.893   0.9       83.893   0.9    50136 CONT::CONT(class PHYS_PROP *,class COST *,bool) (supp.obj)
+      70.920   0.7      184.429   1.9    18852 SCHEMA::Contains(class KEYS_SET *) (supp.obj)
+      67.680   0.7       67.680   0.7   344528 is_bit_off(unsigned int,int) (supp.obj)
+      50.693   0.5       50.693   0.5    76776 COST::operator=(class COST const &) (supp.obj)
+      46.557   0.5       46.557   0.5    42207 GetCollId(int) (supp.obj)
+      44.648   0.5       44.648   0.5    18566 PHYS_PROP::PHYS_PROP(class KEYS_SET *,enum ORDER) (supp.obj)
+      42.804   0.4       41.372   0.4       99 GetAttId(class CString,class CString) (supp.obj)
+      37.719   0.4       67.739   0.7      511 SCHEMA::~SCHEMA(void) (supp.obj)
+      28.413   0.3       74.970   0.8     2295 SCHEMA::GetTableMaxCuCard(int) (supp.obj)
+      24.617   0.3       30.020   0.3     8448 ATTR::`scalar deleting destructor'(unsigned int) (supp.obj)
+      23.652   0.2       23.652   0.2        9 COST::Dump(void) (supp.obj)
+      10.046   0.1       10.046   0.1     2044 CArray<class CONT *,class CONT *>::AssertValid(void) (supp.obj)
+       8.363   0.1        8.363   0.1      527 KEYS_SET::CopyOut(void) (supp.obj)
+       6.111   0.1        6.111   0.1    16668 EqualArray(int *,int *,int) (supp.obj)
+       5.402   0.1        5.402   0.1     8448 ATTR::~ATTR(void) (supp.obj)
+       4.978   0.1       27.531   0.3       50 KEYS_SET::AddKey(class CString,class CString) (supp.obj)
+       4.768   0.0        4.131   0.0      140 GetCollId(class CString) (supp.obj)
+       3.999   0.0        3.999   0.0     1152 KEYS_SET::ContainKey(int) (supp.obj)
+       3.745   0.0        3.651   0.0       17 GetIndId(class CString,class CString) (supp.obj)
+       1.204   0.0        1.204   0.0     8448 SCHEMA::AddAttr(int,class ATTR *) (supp.obj)
+       0.797   0.0        0.750   0.0      311 IsCommentOrBlankLine(char *) (supp.obj)
+       0.796   0.0        0.796   0.0        1 OPT_STAT::Dump(void) (supp.obj)
+       0.652   0.0        0.652   0.0       17 atoCollOrder(char *) (supp.obj)
+       0.339   0.0        0.420   0.0      422 parseString(char *) (supp.obj)
+       0.261   0.0        0.306   0.0       33 GetCollName(int) (supp.obj)
+       0.251   0.0        0.251   0.0     1569 SkipSpace(char *) (supp.obj)
+       0.204   0.0        0.204   0.0       49 atoDomain(char *) (supp.obj)
+       0.146   0.0        0.762   0.0       16 GetAttName(int) (supp.obj)
+       0.127   0.0        0.127   0.0       18 SCHEMA::GetTableWidth(int) (supp.obj)
+       0.047   0.0        0.047   0.0       17 atoIndexOrder(char *) (supp.obj)
+       0.022   0.0        0.022   0.0       32 PHYS_PROP::operator==(class PHYS_PROP *) (supp.obj)
+       0.014   0.0        0.018   0.0        1 CArray<class CONT *,class CONT *>::~CArray<class CONT *,class CONT *>(void) (supp.obj)
+       0.009   0.0        0.009   0.0        1 _$E206 (supp.obj)
+       0.003   0.0        0.003   0.0        1 CArray<class CONT *,class CONT *>::CArray<class CONT *,class CONT *>(void) (supp.obj)
+       0.003   0.0        0.021   0.0        1 _$E204 (supp.obj)
+       0.000   0.0        0.000   0.0     6553 CArray<class CString,class CString>::ElementAt(int) (supp.obj)
+       0.000   0.0        0.000   0.0     6553 CArray<class CString,class CString>::operator[](int) (supp.obj)
+       0.000   0.0        0.003   0.0        1 _$E203 (supp.obj)
+       0.000   0.0        0.012   0.0        1 _$E207 (supp.obj)

@@ -1,0 +1,32 @@
+(ORDER_BY(N.NN, .YEAR),
+	(PROJECT(N.NN, .YEAR, .SUM),
+		(AGG_LIST((.AMOUNT AS SUM), (GROUP_BY <N.NN, YEAR>)),
+			(FUNC_OP(<L.LE, L.LD, L.LQ, PS.PSC> AS AMOUNT),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(L.LOK, O.OOK),
+						(EQJOIN(L.LPK, P.PPK),
+							(EQJOIN(<L.LSK, L.LPK>, <PS.PSSK, PS.PSPK>),
+								(EQJOIN(S.SSK, L.LSK),
+									GET("S"),
+									GET("L")
+								),
+								GET("PS")
+							),
+							(SELECT,
+								GET("P"),
+								(OP_LIKE,
+									ATTR("P.PN"),
+									STR("COLOR")
+								)
+							)
+						),
+						(FUNC_OP(O.OD AS YEAR),
+							GET("O")
+						)
+					),
+					GET("N")
+				)
+			)
+		)
+	)
+)

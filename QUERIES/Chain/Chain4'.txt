@@ -1,0 +1,12 @@
+//CHAIN query #4
+
+                        EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        )

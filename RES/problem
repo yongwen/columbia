@@ -1,0 +1,239 @@
+TPCD-17
+Eps=0.1
+Query: 1
+Optimization beginning time:		21:45:15
+TotalTask : 842
+TotalGroup : 38
+CurrentMExpr : 246
+TotalMExpr : 273
+Duplicate MExpr: 13 
+Hashed Logical MExpr: 74 
+Max Overflow Buckets: 0 
+FiredRules: 282 
+Optimization completing time:		21:45:15
+========  OPTIMAL PLAN =========
+P_PROJECT(.AVG_YEARLY), Cost =  37899.400 
+	HGROUP_LIST( Group By:Empty set )( Aggregating: AGG_OP <L1.LE AS AVG_YEARLY > ), Cost =  37899.400 
+		FILTER, Cost =  37779.400 
+			MERGE_JOIN(<L1.LPK>,<P.PPK>), Cost =  37689.400 
+				FILE_SCAN(L1), Cost =  18018.030 
+				MERGE_JOIN(<P.PPK>,<L2.LPK>), Cost =  19550.370 
+					FILTER, Cost =  602.650 
+						FILE_SCAN(P), Cost =  600.630 
+						OP_AND, Cost =  0.000 
+							OP_EQ, Cost =  0.000 
+								ATTR(P.PB), Cost = 0
+								STR(SBRAND), Cost = 0
+							OP_EQ, Cost =  0.000 
+								ATTR(P.PC), Cost = 0
+								STR(SCON), Cost = 0
+					MERGE_JOIN(<P.PPK>,<L2.LPK>), Cost =  18945.700 
+						FILTER, Cost =  602.650 
+							FILE_SCAN(P), Cost =  600.630 
+							OP_AND, Cost =  0.000 
+								OP_EQ, Cost =  0.000 
+									ATTR(P.PB), Cost = 0
+									STR(SBRAND), Cost = 0
+								OP_EQ, Cost =  0.000 
+									ATTR(P.PC), Cost = 0
+									STR(SCON), Cost = 0
+						HGROUP_LIST( Group By:L2.LPK,L2.LPK )( Aggregating: AGG_OP <L2.LQ AS LQUANTITY > ), Cost =  18300.030 
+							FILE_SCAN(L2), Cost =  18018.030 
+			OP_LT, Cost =  0.000 
+				ATTR(L1.LQ), Cost = 0
+				ATTR(.LQUANTITY), Cost = 0
+
+Eps=0.0
+Query: 1
+Optimization beginning time:		21:46:19
+TotalTask : 856
+TotalGroup : 38
+CurrentMExpr : 247
+TotalMExpr : 271
+Duplicate MExpr: 13 
+Hashed Logical MExpr: 75 
+Max Overflow Buckets: 0 
+FiredRules: 291 
+Optimization completing time:		21:46:19
+========  OPTIMAL PLAN =========
+P_PROJECT(.AVG_YEARLY), Cost =  37899.400 
+	HGROUP_LIST( Group By:Empty set )( Aggregating: AGG_OP <L1.LE AS AVG_YEARLY > ), Cost =  37899.400 
+		FILTER, Cost =  37779.400 
+			MERGE_JOIN(<L1.LPK>,<P.PPK>), Cost =  37689.400 
+				FILE_SCAN(L1), Cost =  18018.030 
+				MERGE_JOIN(<P.PPK>,<L2.LPK>), Cost =  19550.370 
+					FILTER, Cost =  602.650 
+						FILE_SCAN(P), Cost =  600.630 
+						OP_AND, Cost =  0.000 
+							OP_EQ, Cost =  0.000 
+								ATTR(P.PB), Cost = 0
+								STR(SBRAND), Cost = 0
+							OP_EQ, Cost =  0.000 
+								ATTR(P.PC), Cost = 0
+								STR(SCON), Cost = 0
+					MERGE_JOIN(<P.PPK>,<L2.LPK>), Cost =  18945.700 
+						FILTER, Cost =  602.650 
+							FILE_SCAN(P), Cost =  600.630 
+							OP_AND, Cost =  0.000 
+								OP_EQ, Cost =  0.000 
+									ATTR(P.PB), Cost = 0
+									STR(SBRAND), Cost = 0
+								OP_EQ, Cost =  0.000 
+									ATTR(P.PC), Cost = 0
+									STR(SCON), Cost = 0
+						HGROUP_LIST( Group By:L2.LPK,L2.LPK )( Aggregating: AGG_OP <L2.LQ AS LQUANTITY > ), Cost =  18300.030 
+							FILE_SCAN(L2), Cost =  18018.030 
+			OP_LT, Cost =  0.000 
+				ATTR(L1.LQ), Cost = 0
+				ATTR(.LQUANTITY), Cost = 0
+&&&&&&&&&&&
+tpcd-8
+eps=0
+Query: 1
+Optimization beginning time:		23:18:20
+TotalTask : 116086
+TotalGroup : 259
+CurrentMExpr : 17439
+TotalMExpr : 20051
+Duplicate MExpr: 2504 
+Hashed Logical MExpr: 8357 
+Max Overflow Buckets: 4 
+FiredRules: 26448 
+Optimization completing time:		23:19:16
+========  OPTIMAL PLAN =========
+QSORTsorted on (.YEAR)  KeyOrder: (ascending), Cost =  31658.186 
+	P_PROJECT(.YEAR,.MKT), Cost =  31658.179 
+		HGROUP_LIST( Group By:.YEAR )( Aggregating: AGG_OP <.VOL,N.NNK AS MKT > ), Cost =  31658.179 
+			LOOPS_JOIN(<N.NRK>,<R.RRK>), Cost =  31658.177 
+				LOOPS_JOIN(<S.SNK>,<N.NNK>), Cost =  31658.147 
+					LOOPS_JOIN(<C.CNK>,<N.NNK>), Cost =  31658.048 
+						LOOPS_INDEX_JOIN(<O.OCK>,<C.CCK>)Index on C, Cost =  31657.949 
+							MERGE_JOIN(<L.LOK>,<O.OOK>), Cost =  31655.946 
+								QSORTsorted on (L.LOK)  KeyOrder: (ascending), Cost =  27125.154 
+									MERGE_JOIN(<S.SSK>,<L.LSK>), Cost =  27125.144 
+										QSORTsorted on (S.SSK)  KeyOrder: (ascending), Cost =  38.033 
+											FILE_SCAN(S), Cost =  30.060 
+										QSORTsorted on (L.LSK)  KeyOrder: (ascending), Cost =  27027.011 
+											MERGE_JOIN(<P.PPK>,<L.LPK>), Cost =  18921.060 
+												FILTER, Cost =  602.830 
+													FILE_SCAN(P), Cost =  600.630 
+													OP_EQ, Cost =  0.000 
+														ATTR(P.PT), Cost = 0
+														STR(STYPE), Cost = 0
+												P_FUNC_OP(L.LD,L.LE) AS VOL, Cost =  18198.030 
+													FILE_SCAN(L), Cost =  18018.030 
+								P_FUNC_OP(O.OD) AS YEAR, Cost =  4527.041 
+									INDEXED_FILTER(O), Cost =  4515.791 
+										OP_AND, Cost =  0.000 
+											OP_GE, Cost =  0.000 
+												ATTR(O.OD), Cost = 0
+												STR(1095), Cost = 0
+											OP_LE, Cost =  0.000 
+												ATTR(O.OD), Cost = 0
+												STR(1824), Cost = 0
+						FILE_SCAN(N), Cost =  0.090 
+					FILE_SCAN(N), Cost =  0.090 
+				FILTER, Cost =  0.030 
+					FILE_SCAN(R), Cost =  0.030 
+					OP_EQ, Cost =  0.000 
+						ATTR(R.RN), Cost = 0
+						STR(SREGION), Cost = 0
+
+eps=0.1
+Query: 1
+Optimization beginning time:		23:21:39
+TotalTask : 114528
+TotalGroup : 259
+CurrentMExpr : 17270
+TotalMExpr : 19869
+Duplicate MExpr: 2468 
+Hashed Logical MExpr: 8230 
+Max Overflow Buckets: 4 
+FiredRules: 25918 
+Optimization completing time:		23:23:25
+========  OPTIMAL PLAN =========
+QSORTsorted on (.YEAR)  KeyOrder: (ascending), Cost =  31658.186 
+	P_PROJECT(.YEAR,.MKT), Cost =  31658.179 
+		HGROUP_LIST( Group By:.YEAR )( Aggregating: AGG_OP <.VOL,N.NNK AS MKT > ), Cost =  31658.179 
+			LOOPS_JOIN(<N.NRK>,<R.RRK>), Cost =  31658.177 
+				LOOPS_JOIN(<S.SNK>,<N.NNK>), Cost =  31658.147 
+					LOOPS_JOIN(<C.CNK>,<N.NNK>), Cost =  31658.048 
+						LOOPS_INDEX_JOIN(<O.OCK>,<C.CCK>)Index on C, Cost =  31657.949 
+							MERGE_JOIN(<L.LOK>,<O.OOK>), Cost =  31655.946 
+								QSORTsorted on (L.LOK)  KeyOrder: (ascending), Cost =  27125.154 
+									MERGE_JOIN(<S.SSK>,<L.LSK>), Cost =  27125.144 
+										QSORTsorted on (S.SSK)  KeyOrder: (ascending), Cost =  38.033 
+											FILE_SCAN(S), Cost =  30.060 
+										QSORTsorted on (L.LSK)  KeyOrder: (ascending), Cost =  27027.011 
+											MERGE_JOIN(<P.PPK>,<L.LPK>), Cost =  18921.060 
+												FILTER, Cost =  602.830 
+													FILE_SCAN(P), Cost =  600.630 
+													OP_EQ, Cost =  0.000 
+														ATTR(P.PT), Cost = 0
+														STR(STYPE), Cost = 0
+												P_FUNC_OP(L.LD,L.LE) AS VOL, Cost =  18198.030 
+													FILE_SCAN(L), Cost =  18018.030 
+								P_FUNC_OP(O.OD) AS YEAR, Cost =  4527.041 
+									INDEXED_FILTER(O), Cost =  4515.791 
+										OP_AND, Cost =  0.000 
+											OP_GE, Cost =  0.000 
+												ATTR(O.OD), Cost = 0
+												STR(1095), Cost = 0
+											OP_LE, Cost =  0.000 
+												ATTR(O.OD), Cost = 0
+												STR(1824), Cost = 0
+						FILE_SCAN(N), Cost =  0.090 
+					FILE_SCAN(N), Cost =  0.090 
+				FILTER, Cost =  0.030 
+					FILE_SCAN(R), Cost =  0.030 
+					OP_EQ, Cost =  0.000 
+						ATTR(R.RN), Cost = 0
+						STR(SREGION), Cost = 0
+
+
+&&&&&&&&&&&
+Chain5
+Query: 1
+Optimization beginning time:		17:35:51
+TotalTask : 142
+TotalGroup : 9
+CurrentMExpr : 49
+TotalMExpr : 55
+Duplicate MExpr: 0 
+Hashed Logical MExpr: 9 
+Max Overflow Buckets: 0 
+FiredRules: 26 
+Optimization completing time:		17:35:51
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  10.657 
+	LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  8.950 
+		LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  7.242 
+			MERGE_JOIN(<A.X>,<B.X>), Cost =  5.534 
+				FILE_SCAN(A), Cost =  1.231 
+				QSORTsorted on (B.X)  KeyOrder: (ascending), Cost =  4.180 
+					FILE_SCAN(B), Cost =  1.231 
+
+
+Query: 1
+Optimization beginning time:		17:36:35
+TotalTask : 504
+TotalGroup : 16
+CurrentMExpr : 136
+TotalMExpr : 141
+Duplicate MExpr: 0 
+Hashed Logical MExpr: 36 
+Max Overflow Buckets: 0 
+FiredRules: 152 
+Optimization completing time:		17:36:35
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  16.202 
+	LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  14.494 
+		MERGE_JOIN(<B.Y>,<C.Y>), Cost =  12.787 
+			QSORTsorted on (B.Y)  KeyOrder: (ascending), Cost =  8.484 
+				MERGE_JOIN(<A.X>,<B.X>), Cost =  5.534 
+					FILE_SCAN(A), Cost =  1.231 
+					QSORTsorted on (B.X)  KeyOrder: (ascending), Cost =  4.180 
+						FILE_SCAN(B), Cost =  1.231 
+			QSORTsorted on (C.Y)  KeyOrder: (ascending), Cost =  4.180 
+				FILE_SCAN(C), Cost =  1.231 
+

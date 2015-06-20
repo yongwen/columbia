@@ -1,0 +1,33 @@
+(ORDER_BY(O.OP),
+	(PROJECT(O.OP, .CNT),
+		(AGG_LIST((<L.LOK, O.OOK> AS CNT), (GROUP_BY O.OP)),
+			(EQJOIN(O.OOK, L.LOK),
+				(SELECT,
+					GET("O"),
+					(OP_AND,
+						(OP_GE,
+							ATTR("O.OD"),
+							INT("1550")
+						),
+						(OP_LT,
+							ATTR("O.OD"),
+							INT("1660")
+						)
+					)
+				),
+				(RM_DUPLICATES,
+					(PROJECT(L.LOK),
+						(SELECT,
+							GET("L"),
+							(OP_LT,
+								ATTR("L.LCD"),
+								ATTR("L.L_RECEIPTDATE")
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
+

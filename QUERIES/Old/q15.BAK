@@ -1,0 +1,28 @@
+(ORDER_BY(S.SSK),
+	(PROJECT(S.SSK, S.SN, S.SA, S.SP, .TOTAL_REV),
+		(SELECT,
+			(EQJOIN(S.SSK, L.LSK),
+				(AGG_LIST((<L.LE, L.LD> AS TOTAL_REV), (GROUP_BY L.LSK)),
+					(SELECT,
+						GET("L"),
+						(OP_AND,
+							(OP_GE,
+								ATTR("L.LSD"),
+								INT("1000")
+							),
+							(OP_LT,
+								ATTR("L.LSD"),
+								INT("1090")
+							)
+						)
+					)
+				),
+				GET("S")
+			),
+			(OP_EQ,
+				ATTR(".TOTAL_REV"),
+				INT("IMAX")
+			)
+		)
+	)
+)

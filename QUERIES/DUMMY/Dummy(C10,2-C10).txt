@@ -1,0 +1,60 @@
+//DUMMY(C10, 2-C10)
+(DUMMY,
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+,
+            (EQJOIN(K.H,L.H), 
+              (EQJOIN(H.E,K.G), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("K")
+              ),
+              GET("L")
+            )
+)

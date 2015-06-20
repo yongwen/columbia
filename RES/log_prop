@@ -1,0 +1,161 @@
+Table Name               Content                 Index         Comment
+==========         ========================      =======       ========
+AttTable           Attr Name "L.LD"              AttID         match AttID and it's name
+CollTable          Collection Name "L"           CollID        match CollID and it's name
+AttCollTable       CollID                        AttID         map AttID to CollID it belongs
+Attrs              object of ATTR class          AttID         AttID, CuCard, Min, Max
+Domains            DOM_TYPE                      AttID         map AttID to it's domain
+CollProps          Properties of collections     CollID        each collection has a coll_prop
+AttNames           list of AttrIDs               CollID        list of attrs of this collection
+
+IndTable           IndexName"L_D"                IndID         match Index and it's name
+IndNames           list of index IDs             CollID        the index list of this collection
+IndProps           Index property                IndID         index property associated with each index
+
+BintIndTable       BitIndexName"L_D"             BitIndID      match BitIndex and it's name
+BitIndNames        list of BitIndex IDs          CollID        the BitIndex list of this collection
+BitIndProps        BitIndex property             BitIndID      index property associated with each BitIndex
+
+CAT:
+  AttNames
+  Attrs
+  BitIndNames
+  BitIndProps
+  IndNames
+  IndProps
+  CollProps
+
+For each logical operator, log_coll_prop is updated along the tree, by method FindLogProp in each log
+operator.
+
+LOG_COLL_PROP:                      |- AttId
+  CandidateKey                      |- CuCard
+  Card              |- Attrs -------|- Min
+  UCard             |               |- Max
+  FKeyList          |- Size         
+  Schema----------->|
+                    |- TableId
+                    |
+                    |- TableNum
+
+GET: Get all the log_coll_prop from catalog
+EQJOIN: 
+  Card: 
+    if is not cross product(size>0), 
+       if either Left->Card or Right->Card is not known, Card = -1
+       else if left attrs are foreign key
+         if (IsFKJoin) Card = Left->Card;
+         else if (IsFKSchema) Card = Left->Card * (Right->Card/RefUcard);
+       else if right attrs are foreign key
+         if (IsFKJoin) Card = Right->Card;
+         else if (IsFKSchema) Card = Right->Card * (Left->Card/RefUcard);
+       else (the ordinary eqjoin)
+         Card = (Left->Card > Right->Card) ? 
+                Left->Card / pow(Right->Card,ConditionNum-1) : 
+                Right->Card / pow(Left->Card,ConditionNum-1);
+    if is cross product
+       if either Left->Card or Right->Card is not known, Card = -1
+       else Card = Left->Card * Right->Card ;
+
+  UCard:
+    if is not cross product(size>0), 
+       if either Left->UCard or Right->UCard is not known, UCard = -1
+       else if left attrs are foreign key
+         if (IsFKJoin) UCard = Left->UCard;
+         else if (IsFKSchema) Card = Left->UCard * (Right->Card/RefUcard);
+       else if right attrs are foreign key
+         if (IsFKJoin) UCard = Right->UCard;
+         else if (IsFKSchema) UCard = Right->UCard * (Left->Card/RefUcard);
+       else (the ordinary eqjoin)
+         UCard = (Left->UCard > Right->UCard) ? 
+                Left->UCard / pow(Right->UCard,ConditionNum-1) : 
+                Right->UCard / pow(Left->UCard,ConditionNum-1);
+    if is cross product
+       if either Left->UCard or Right->UCard is not known, UCard = -1
+       else Card = Left->UCard * Right->UCard ;
+
+    *RefUCard is the referenced key's CuCard
+
+  CandidateKey:
+    if is foreign key join
+       if left atrrs are foreign key, CandidateKey = Left->CandidateKey
+       if right atrrs are foreign key, CandidateKey = Right->CandidateKey
+    else
+       CandidateKey = Left->CandidteKey merge Right->CandidteKey
+  FKeyList: 
+    merge Left->FKeyList and Right->KeyList
+  Schema:
+    union Left and Right schema. 
+      In union, For each attr, min and max does not change, if CuCard != -1, CuCard = CuCard/2
+
+SELECT:
+  Card:
+    rel_input->Card*Selectivity
+  UCard:
+    ceil(rel_input -> UCard * selectivity
+  CandidateKey:
+    rel_input ->CandidateKey
+  FKeyList:
+    rel_input -> FKeyList
+  Schema:
+    keep the same attrs as rel_input, 
+    For each attr, if CuCard != -1, CuCard = ceil(1 / (1/old_cucard - 1/(rel_input->Card) + 1/new_card) );
+    XX Should chang Min and Max, Min and Max should come from right_input(ITEM_OP)
+
+PROJECT:
+  Card:
+    rel_input->Card
+  UCard:
+    Min(rel_input->Card, the product of CuCard of the attrs which are projected
+  CandidateKey:
+    if rel_input->CandidteKey is subset of the projected attrs, 
+       CandidateKey = rel_input->CandidteKey
+    else CandidateKey is empty
+  FKeyList:
+    for each foreign key in rel_input, if it is a subset of the projected attrs, it is a foreign key
+    in FKeyList
+  Schema:
+    Keep the projected attrs, for each attr, CuCard, Min, Max does not change
+
+AGG_LIST:
+  Card:
+    if all group_by attr CuCard != -1, Card = product of CuCard of each group_by attr
+    else Card = rel_input->Card * reduction fcator(0.7)
+    chose min from the above two
+  UCard:
+    same as Card
+  CandidteKey;
+    if the input candidatekey is the subset of the groupby attrs, CandidteKey=input_rel->CandidteKey
+    else CandidteKey = group_by attrs
+  FKeyList;
+    for each foreign key in the input_rel FKeyList, if it is subset of group by attrs, add this to
+    FKeyList
+  Schema:
+    the group_by attrs plus the new attrs generated by AggOp 
+    for the group_by attrs, the CuCard, Min, and Max does not change
+    for the new AggOp attrs, CuCard is the same as UCard, Min and Mix not known
+
+RM_DUPLIATES:
+  Card:
+    input_rel->UCard
+  UCard:
+    input_rel->UCard
+  CandidateKey:
+    input_rel->CandidateKey
+  FKeyList
+    input_rel->FKeyList
+  Schema;
+    input_rel->schema, for each attr, CuCard, Min and Max does not change
+
+FUNC_OP:
+  Card:
+    input_rel->UCard
+  UCard:
+    input_rel->UCard
+  CandidateKey:
+    input_rel->CandidateKey
+  FKeyList
+    input_rel->FKeyList
+  Schema;
+    input_rel->schema plus the new attr generated, for each old attr, CuCard, Min and Max does not change
+    for the new attr, the CuCard is the UCard of the input relation

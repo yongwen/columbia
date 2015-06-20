@@ -1,0 +1,13 @@
+//DUMMY(Chain2,1-Chain2)
+(DUMMY(),
+                            (EQJOIN (L.H,B.X), 
+                              GET ("L"), 
+                              GET ("B") 
+                            )
+,
+
+                            (EQJOIN (K.G,B.X), 
+                              GET ("K"), 
+                              GET ("B") 
+                            )
+)

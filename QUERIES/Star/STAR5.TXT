@@ -1,0 +1,15 @@
+//STAR query #5
+
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      )

@@ -1,0 +1,68 @@
+(ORDER_BY(S.S_ACCTBAL, N.NN, S.SN, P.PPK),
+		(EQJOIN(<P.PPK, PS.PSC>, <PS.PSPK, .MINC>),
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(S.SSK, PS.PSSK),
+						GET("S"),
+						(EQJOIN(P.PPK, PS.PSPK),
+							GET("P"),
+												GET("PS")
+						)
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION");
+					)
+				)
+			),
+			(AGG_LIST ((PS.PSC AS MINC), (GROUP_BY PS.PSPK)),
+				(EQJOIN(N.NRK, R.RRK),			
+					(EQJOIN(S.SNK, N.NNK),
+						(EQJOIN(S.SSK, PS.PSSK),
+							GET("S"),
+							GET("PS")
+						),
+						GET("N")
+					),
+					(SELECT,
+						GET("R"),
+						(OP_EQ,
+						ATTR ("R.RN"),
+							STR("SREGION")
+						)
+					)
+				)
+			)
+		)
+)
+
+(SELECT,
+	GET("R"),
+	(OP_EQ,
+		ATTR("R.RN"),
+		STR("SREGION")
+	)
+)
+
+( AGG_LIST ((PS.PSC AS MINC), (GROUP_BY PS.PSPK)),
+	(EQJOIN(N.NRK, R.RRK),			
+		(EQJOIN(S.SNK, N.NNK),
+			(EQJOIN(S.SSK, PS.PSSK),
+				GET("S"),
+				GET("PS")
+			),
+			GET("N")
+		),
+		(SELECT,
+			GET("R"),
+			(OP_EQ,
+				ATTR ("R.RN"),
+				STR("SREGION")
+			)
+		)
+	)
+)

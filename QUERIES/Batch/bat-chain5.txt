@@ -1,0 +1,53 @@
+NumOfQuery:5
+Query: 1
+(GET("A"))
+
+Query: 2
+//CHAIN query #2
+
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            )
+
+Query: 3
+//CHAIN query #3
+
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          )
+
+Query: 4
+//CHAIN query #4
+
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        )
+
+Query: 5
+//CHAIN query #5
+
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      )

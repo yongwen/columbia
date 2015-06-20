@@ -1,0 +1,95 @@
+RelName: A
+Card: 447
+UCard: 447
+Width: 0.01
+Order: sorted
+OrderKey: (X)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 17
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A 			real_t		22		22    0
+B 			real_t		22		22    0
+C 			real_t		22		22    0
+D 			real_t		22		22    0
+E 			real_t		22		22    0
+F 			real_t		22		22    0
+G 			real_t		22		22    0
+H 			real_t		22		22    0
+I 			real_t		22		22    0
+J 			real_t		22		22    0
+K 			real_t		22		22    0
+L 			real_t		22		22    0
+M 			real_t		22		22    0
+N 			real_t		22		22    0
+X 			real_t		22		22    0
+Y 			real_t		22		22    0
+Z 			real_t		22		22    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+A_Y                  (Y)                  btree
+ 
+RelName: B
+Card: 211
+UCard: 211
+Width: 0.01
+Order: sorted
+OrderKey: (X)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+X           real_t      22           22    0
+Y           real_t      22           22    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+B_Y                  (Y)                  btree
+ 
+RelName: C
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (Y)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Y           real_t      22           22    0
+Z           real_t      22           22    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+C_Z                  (Z)                  btree
+ 
+RelName: D
+Card: 47
+UCard: 47
+Width: 0.01
+Order: sorted
+OrderKey: (Z)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Z           real_t      22           22    0
+A           real_t      22           22    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+D_A                  (A)                  btree
+ 
+RelName: E
+Card: 22
+UCard: 22
+Width: 0.01
+Order: sorted
+OrderKey: (A)
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 2
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A           real_t      22           22    0
+B           real_t      22           22    0
+NumofIndex: 1
+//IndexName(S)          Attribute (K)       Order (E) 
+E_B                  (B)                  btree
+ 

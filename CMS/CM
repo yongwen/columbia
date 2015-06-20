@@ -1,0 +1,15 @@
+//cost model text file for ABC
+// 12-4-97
+
+CPU_READ:       0.00003     // cpu cost of reading one block from the disk
+TOUCH_COPY:     0.00001	    //cpu cost of copying one tuple to the next operator
+CPU_PRED:       0.00001 	// cpu cost of evaluating one predicate
+CPU_APPLY:      0.00002 	// cpu cost of applying function on one attribute
+CPU_COMP_MOVE:  0.00003 	// cpu cost of comparing and moving tuples
+HASH_COST:      0.00002 	// cpu cost of building hash table
+HASH_PROBE:     0.00001     // cpu cost of finding hash bucket
+INDEX_PROBE:    0.00001 	// cpu cost of finding index
+BF:             100 	    // block factor of table file
+INDEX_BF:       1000        // block factor of index file
+IO:             0.03        // i/o cost of reading one block
+BIT_BF:			100000		// block factor of bit index file

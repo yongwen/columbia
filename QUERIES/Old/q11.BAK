@@ -1,0 +1,69 @@
+(ORDER_BY(.VALUE),
+	(PROJECT(PS.PSPK, .VALUE),
+		(SELECT,
+			(AGG_LIST((<PS.PSC, PS.PSA> AS VALUE), (GROUP_BY PS.PSPK)),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(PS.PSSK, S.SSK),
+						GET("PS"),
+						GET("S")
+					),
+					(SELECT,
+						GET("N"),
+						(OP_EQ,
+							ATTR("N.NN"),
+							STR("SNATION")
+						)
+					)
+				)
+			),
+			(OP_GT,
+				ATTR(".VALUE"),
+				(PROJECT(.FRACTION),
+					(FUNC_OP(.VALUE AS FRACTION),
+						(AGG_LIST((<PS.PSC, PS.PSA> AS VALUE), (GROUP_BY PS.PSPK)),
+							(EQJOIN(S.SNK, N.NNK),
+								(EQJOIN(PS.PSSK, S.SSK),
+									GET("PS"),
+									GET("S")
+								),
+								(SELECT,
+									GET("N"),
+									(OP_EQ,
+										ATTR("N.NN"),
+										STR("SNATION")
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+(ORDER_BY(.VALUE),
+	(PROJECT(PS.PSPK, .VALUE),
+		(SELECT,
+			(AGG_LIST((<PS.PSC, PS.PSA> AS VALUE), (GROUP_BY PS.PSPK)),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(PS.PSSK, S.SSK),
+						GET("PS"),
+						GET("S")
+					),
+					(SELECT,
+						GET("N"),
+						(OP_EQ,
+							ATTR("N.NN"),
+							STR("SNATION")
+						)
+					)
+				)
+			),
+			(OP_GT,
+				ATTR(".VALUE"),
+				INT("IFRACTION");
+			)
+		)
+	)
+)

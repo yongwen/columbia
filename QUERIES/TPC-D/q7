@@ -1,0 +1,125 @@
+(ORDER_BY(S.SNK, C.CNK, .YEAR),	
+	(PROJECT(S.SNK, C.CNK, .YEAR, .SUM),
+		(AGG_LIST((.VOL AS SUM), (GROUP_BY <S.SNK, C.CNK, .YEAR>)),
+			(SELECT,
+				(EQJOIN(C.CNK, N2.NNK),
+					(EQJOIN(S.SNK, N1.NNK),
+						(EQJOIN(O.OCK, C.CCK),
+							(EQJOIN(L.LOK, O.OOK),
+								(EQJOIN(S.SSK, L.LSK),
+									GET("S"),
+									(FUNC_OP(L.LSD AS YEAR),
+										(FUNC_OP(<L.LE, L.LD> AS VOL),
+											(SELECT,
+												GET("L"),
+												(OP_AND,
+													(OP_GE,
+														ATTR("L.LSD"),
+														INT("1095")
+													),
+													(OP_LE,
+														ATTR("L.LSD"),
+														INT("1824")
+													)
+												)
+											)
+										)
+									)
+								),
+								GET("O")
+							),
+							GET("C")
+						),
+						GET("N", "N1")
+					),
+					GET("N", "N2")
+				),
+				(OP_OR,
+					(OP_AND,
+						(OP_EQ,
+							ATTR("N1.NN"),
+							STR("SNATION1")
+						),
+						(OP_EQ,
+							ATTR("N2.NN"),
+							STR("SNATION2")
+						)
+					),
+					(OP_AND,
+						(OP_EQ,
+							ATTR("N1.NN"),
+							STR("SNATION2")
+						),
+						(OP_EQ,
+							ATTR("N2.NN"),
+							STR("SNATION1")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+(ORDER_BY(S.SNK, C.CNK, .YEAR),	
+	(PROJECT(S.SNK, C.CNK, .YEAR, .SUM),
+		(AGG_LIST((.VOL AS SUM), (GROUP_BY <S.SNK, C.CNK, .YEAR>)),
+			(SELECT,
+				(EQJOIN(C.CNK, N.NNK),
+					(EQJOIN(S.SNK, N.NNK),
+						(EQJOIN(O.OCK, C.CCK),
+							(EQJOIN(L.LOK, O.OOK),
+								(EQJOIN(S.SSK, L.LSK),
+									GET("S"),
+									(FUNC_OP(<L.LE, L.LD> AS VOL),
+										GET("L")
+									)
+								),
+								(FUNC_OP(O.OD AS YEAR),
+									(SELECT,
+										GET("O"),
+										(OP_AND,
+											(OP_GE,
+												ATTR("O.OD"),
+												INT("1095")
+											),
+											(OP_LE,
+												ATTR("O.OD"),
+												INT("1824")
+											)
+										)
+									)
+								)
+							),
+							GET("C")
+						),
+						GET("N")
+					),
+					GET("N")
+				),
+				(OP_OR,
+					(OP_AND,
+						(OP_EQ,
+							ATTR("N1.NN"),
+							STR("SNATION1")
+						),
+						(OP_EQ,
+							ATTR("N2.NN"),
+							STR("SNATION2")
+						)
+					),
+					(OP_AND,
+						(OP_EQ,
+							ATTR("N1.NN"),
+							STR("SNATION2")
+						),
+						(OP_EQ,
+							ATTR("N2.NN"),
+							STR("SNATION1")
+						)
+					)
+				)
+			)
+		)
+	)
+)

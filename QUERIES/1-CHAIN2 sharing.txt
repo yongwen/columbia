@@ -1,0 +1,7 @@
+//1-Chain2 for sharing
+
+
+                            (EQJOIN (K.G,B.X), 
+                              GET ("K"), 
+                              GET ("B") 
+                            )

@@ -1,0 +1,6 @@
+//STAR query #2
+
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            )

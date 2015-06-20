@@ -1,0 +1,194 @@
+
+NumOfQuery:8
+
+Query:1
+//Chain3
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          )
+
+Query: 2
+//Chain4
+
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        )
+
+
+Query:3
+//CHAIN query #5
+
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      )
+
+
+Query:4
+//CHAIN query #6
+
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    )
+
+
+Query:5
+//CHAIN query #7
+
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  )
+
+
+Query:6
+//Chain8
+
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                )
+
+
+Query:7
+//Chain9
+
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              )
+
+
+Query:8
+//Chain10
+
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

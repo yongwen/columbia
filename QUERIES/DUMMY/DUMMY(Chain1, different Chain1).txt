@@ -1,0 +1,7 @@
+//DUMMY(Chain1, different Chain1)
+(DUMMY(),
+                             
+                              GET ("A")
+,
+                              GET ("F") 
+)

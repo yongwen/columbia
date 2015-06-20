@@ -1,0 +1,175 @@
+Query: 1
+Optimization beginning time:		21:23:47
+TotalTask : 4
+TotalGroup : 1
+CurrentMExpr : 3
+TotalMExpr : 3
+Dupplicate MExpr: 0 
+Hashed Logical MExpr: 1 
+Max Overflow Buckets: 0 
+FiredRules: 1 
+Optimization completing time:		21:23:47
+========  OPTIMAL PLAN =========
+FILE_SCAN(A), Cost =  1.231 
+Query: 2
+Optimization beginning time:		21:23:48
+TotalTask : 47
+TotalGroup : 3
+CurrentMExpr : 19
+TotalMExpr : 21
+Dupplicate MExpr: 0 
+Hashed Logical MExpr: 4 
+Max Overflow Buckets: 0 
+FiredRules: 16 
+Optimization completing time:		21:23:48
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+	FILE_SCAN(A), Cost =  1.231 
+Query: 3
+Optimization beginning time:		21:23:48
+TotalTask : 180
+TotalGroup : 7
+CurrentMExpr : 57
+TotalMExpr : 60
+Dupplicate MExpr: 0 
+Hashed Logical MExpr: 15 
+Max Overflow Buckets: 0 
+FiredRules: 66 
+Optimization completing time:		21:23:48
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+	LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+		FILE_SCAN(A), Cost =  1.231 
+Query: 4
+Optimization beginning time:		21:23:49
+TotalTask : 482
+TotalGroup : 15
+CurrentMExpr : 147
+TotalMExpr : 158
+Dupplicate MExpr: 6 
+Hashed Logical MExpr: 60 
+Max Overflow Buckets: 1 
+FiredRules: 190 
+Optimization completing time:		21:23:49
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+	LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+		LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+			FILE_SCAN(A), Cost =  1.231 
+Query: 5
+Optimization beginning time:		21:23:50
+TotalTask : 1183
+TotalGroup : 31
+CurrentMExpr : 381
+TotalMExpr : 430
+Dupplicate MExpr: 42 
+Hashed Logical MExpr: 227 
+Max Overflow Buckets: 1 
+FiredRules: 485 
+Optimization completing time:		21:23:51
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  8.062 
+	LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+		LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+			LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+				FILE_SCAN(A), Cost =  1.231 
+Query: 6
+Optimization beginning time:		21:23:52
+TotalTask : 2815
+TotalGroup : 63
+CurrentMExpr : 1007
+TotalMExpr : 1208
+Dupplicate MExpr: 192 
+Hashed Logical MExpr: 800 
+Max Overflow Buckets: 2 
+FiredRules: 1171 
+Optimization completing time:		21:23:54
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<E.B>,<F.B>)Index on F, Cost =  9.770 
+	LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  8.062 
+		LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+			LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+				LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+					FILE_SCAN(A), Cost =  1.231 
+Query: 7
+Optimization beginning time:		21:23:55
+TotalTask : 6766
+TotalGroup : 127
+CurrentMExpr : 2737
+TotalMExpr : 3480
+Dupplicate MExpr: 732 
+Hashed Logical MExpr: 2671 
+Max Overflow Buckets: 2 
+FiredRules: 2796 
+Optimization completing time:		21:24:01
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<F.C>,<G.C>)Index on G, Cost =  11.477 
+	LOOPS_INDEX_JOIN(<E.B>,<F.B>)Index on F, Cost =  9.770 
+		LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  8.062 
+			LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+				LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+					LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+						FILE_SCAN(A), Cost =  1.231 
+Query: 8
+Optimization beginning time:		21:24:02
+TotalTask : 16791
+TotalGroup : 255
+CurrentMExpr : 7643
+TotalMExpr : 10194
+Dupplicate MExpr: 2538 
+Hashed Logical MExpr: 8596 
+Max Overflow Buckets: 6 
+FiredRules: 6780 
+Optimization completing time:		21:24:18
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<G.D>,<H.D>)Index on H, Cost =  13.185 
+	LOOPS_INDEX_JOIN(<F.C>,<G.C>)Index on G, Cost =  11.477 
+		LOOPS_INDEX_JOIN(<E.B>,<F.B>)Index on F, Cost =  9.770 
+			LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  8.062 
+				LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+					LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+						LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+							FILE_SCAN(A), Cost =  1.231 
+Query: 9
+Optimization beginning time:		21:24:20
+TotalTask : 43302
+TotalGroup : 511
+CurrentMExpr : 21813
+TotalMExpr : 30162
+Dupplicate MExpr: 8334 
+Hashed Logical MExpr: 27003 
+Max Overflow Buckets: 9 
+FiredRules: 16935 
+Optimization completing time:		21:25:01
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<H.E>,<I.E>)Index on I, Cost =  14.893 
+	LOOPS_INDEX_JOIN(<G.D>,<H.D>)Index on H, Cost =  13.185 
+		LOOPS_INDEX_JOIN(<F.C>,<G.C>)Index on G, Cost =  11.477 
+			LOOPS_INDEX_JOIN(<E.B>,<F.B>)Index on F, Cost =  9.770 
+				LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  8.062 
+					LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+						LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+							LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+								FILE_SCAN(A), Cost =  1.231 
+Query: 10
+Optimization beginning time:		21:25:04
+TotalTask : 115871
+TotalGroup : 1023
+CurrentMExpr : 63255
+TotalMExpr : 89756
+Dupplicate MExpr: 26484 
+Hashed Logical MExpr: 83496 
+Max Overflow Buckets: 17 
+FiredRules: 43801 
+Optimization completing time:		21:27:42
+========  OPTIMAL PLAN =========
+LOOPS_INDEX_JOIN(<I.F>,<J.F>)Index on J, Cost =  16.600 
+	LOOPS_INDEX_JOIN(<H.E>,<I.E>)Index on I, Cost =  14.893 
+		LOOPS_INDEX_JOIN(<G.D>,<H.D>)Index on H, Cost =  13.185 
+			LOOPS_INDEX_JOIN(<F.C>,<G.C>)Index on G, Cost =  11.477 
+				LOOPS_INDEX_JOIN(<E.B>,<F.B>)Index on F, Cost =  9.770 
+					LOOPS_INDEX_JOIN(<D.A>,<E.A>)Index on E, Cost =  8.062 
+						LOOPS_INDEX_JOIN(<C.Z>,<D.Z>)Index on D, Cost =  6.354 
+							LOOPS_INDEX_JOIN(<B.Y>,<C.Y>)Index on C, Cost =  4.647 
+								LOOPS_INDEX_JOIN(<A.X>,<B.X>)Index on B, Cost =  2.939 
+									FILE_SCAN(A), Cost =  1.231 

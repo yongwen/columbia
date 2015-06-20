@@ -1,0 +1,15 @@
+ //CHAIN query #5 with last two tables changed
+
+                      (EQJOIN(F.C,G.C), 
+                        (EQJOIN(C.Z,F.B), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("F")
+                        ),	
+                        GET("G")
+                      )

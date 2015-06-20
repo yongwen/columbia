@@ -1,0 +1,75 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 08:37:55 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 08:24: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 634570.682 millisecond
+    Time outside of functions: 541695.358 millisecond
+    Call depth: 4
+    Total functions: 62
+    Total hits: 3775701
+    Function coverage: 77.4%
+    Overhead Calculated 9
+    Overhead Average 9
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 92875.324 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 62
+    Hits in module: 3775701
+    Module function coverage: 77.4%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+   61267.147  66.0    64698.916  69.7    64493 APPLY_RULE::perform(int) (tasks.obj)
+   10596.325  11.4    15269.767  16.4    71504 O_INPUTS::perform(int) (tasks.obj)
+    6138.259   6.6     9118.247   9.8    18669 O_EXPR::perform(int) (tasks.obj)
+    4051.876   4.4     4126.625   4.4    70874 O_INPUTS::~O_INPUTS(void) (tasks.obj)
+    3387.099   3.6     3431.023   3.7    70874 O_INPUTS::O_INPUTS(class M_EXPR *,int,int,bool) (tasks.obj)
+     944.608   1.0     3152.483   3.4     1411 O_GROUP::perform(int) (tasks.obj)
+     786.760   0.8     1202.102   1.3   216231 RULE::top_match(class OP *) (tasks.obj)
+     492.529   0.5      492.529   0.5   344528 M_EXPR::can_fire(int) (tasks.obj)
+     443.923   0.5      443.923   0.5   409021 RULE::get_index(void) (tasks.obj)
+     416.168   0.4      416.168   0.4    70874 O_INPUTS::operator new(unsigned int) (tasks.obj)
+     415.342   0.4      415.342   0.4   215720 LOG_OP::OpMatch(class LOG_OP *) (tasks.obj)
+     315.093   0.3      315.093   0.3   314164 PTASKS::empty(void) (tasks.obj)
+     272.859   0.3     4665.345   5.0    70874 O_INPUTS::`scalar deleting destructor'(unsigned int) (tasks.obj)
+     272.268   0.3      351.303   0.4   157081 PTASKS::pop(void) (tasks.obj)
+     265.861   0.3      265.861   0.3    70874 O_INPUTS::operator delete(void *,unsigned int) (tasks.obj)
+     246.019   0.3      246.019   0.3    64493 APPLY_RULE::operator new(unsigned int) (tasks.obj)
+     242.988   0.3      284.680   0.3    64493 APPLY_RULE::~APPLY_RULE(void) (tasks.obj)
+     225.540   0.2      225.540   0.2   317373 RULE_SET::operator[](int) (tasks.obj)
+     216.158   0.2      216.158   0.2    64493 APPLY_RULE::operator delete(void *,unsigned int) (tasks.obj)
+     199.543   0.2      201.173   0.2    64493 APPLY_RULE::APPLY_RULE(class RULE *,class M_EXPR *,bool,int,int,bool) (tasks.obj)
+     185.534   0.2      185.534   0.2    64493 M_EXPR::fire_rule(int) (tasks.obj)
+     182.360   0.2      683.197   0.7    64493 APPLY_RULE::`scalar deleting destructor'(unsigned int) (tasks.obj)
+     164.317   0.2      164.317   0.2   128476 RULE::GetPattern(void) (tasks.obj)
+     135.411   0.1      135.411   0.1   156451 TASK::~TASK(void) (tasks.obj)
+     123.676   0.1      123.676   0.1    18669 O_EXPR::operator new(unsigned int) (tasks.obj)
+     113.160   0.1      113.160   0.1   157081 PTASKS::push(class TASK *) (tasks.obj)
+     101.922   0.1      119.177   0.1    18669 O_EXPR::~O_EXPR(void) (tasks.obj)
+      97.989   0.1       97.989   0.1    54361 RULE::get_mask(void) (tasks.obj)
+      92.016   0.1       92.016   0.1    82144 compare_moves(void const *,void const *) (tasks.obj)
+      87.883   0.1       87.883   0.1    64493 CONT::is_done(void) (tasks.obj)
+      77.896   0.1      103.131   0.1    18669 O_EXPR::O_EXPR(class M_EXPR *,bool,int,int,bool) (tasks.obj)
+      73.160   0.1       73.160   0.1    18669 O_EXPR::operator delete(void *,unsigned int) (tasks.obj)
+      72.809   0.1       72.809   0.1   156451 TASK::TASK(int,int) (tasks.obj)
+      57.721   0.1      250.059   0.3    18669 O_EXPR::`scalar deleting destructor'(unsigned int) (tasks.obj)
+      44.275   0.0       52.650   0.1     1411 O_GROUP::`scalar deleting destructor'(unsigned int) (tasks.obj)
+      30.767   0.0       33.697   0.0     1004 E_GROUP::`scalar deleting destructor'(unsigned int) (tasks.obj)
+      14.330   0.0       48.027   0.1     1004 E_GROUP::perform(int) (tasks.obj)
+       6.308   0.0        8.375   0.0     1411 O_GROUP::~O_GROUP(void) (tasks.obj)
+       4.588   0.0        6.273   0.0     1411 O_GROUP::O_GROUP(int,int,int,bool) (tasks.obj)
+       2.554   0.0        2.930   0.0     1004 E_GROUP::~E_GROUP(void) (tasks.obj)
+       2.533   0.0        2.867   0.0     1004 E_GROUP::E_GROUP(int,int,int,bool) (tasks.obj)
+       2.400   0.0        2.400   0.0      678 COST::COST(class COST &) (tasks.obj)
+       1.835   0.0        1.835   0.0     1005 WINNER::SetDone(void) (tasks.obj)
+       1.616   0.0        1.616   0.0      390 COST::operator-=(class COST const &) (tasks.obj)
+       1.217   0.0        1.217   0.0     1004 GROUP::is_exploring(void) (tasks.obj)
+       0.512   0.0        0.512   0.0        1 PTASKS::PTASKS(void) (tasks.obj)
+       0.169   0.0        0.169   0.0       48 CONT::SetUpperBound(class COST &) (tasks.obj)
+       0.002   0.0        0.005   0.0        1 PTASKS::~PTASKS(void) (tasks.obj)

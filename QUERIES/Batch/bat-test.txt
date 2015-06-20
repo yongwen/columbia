@@ -1,0 +1,9 @@
+NumOfQuery:1
+Query: 1
+                            (EQJOIN (B.X,B.X), 
+                              GET ("B"), 
+                              GET ("B") 
+                            )
+Query: 2
+
+(GET("A"))

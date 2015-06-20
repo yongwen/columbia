@@ -1,0 +1,45 @@
+//CHAIN query #15
+
+  (EQJOIN(L.K,O.K), 
+    (EQJOIN(M.J,N.J), 
+      (EQJOIN(L.I,M.I), 
+        (EQJOIN(K.H,L.H), 
+          (EQJOIN(J.G,K.G), 
+            (EQJOIN(I.F,J.F), 
+              (EQJOIN(H.E,I.E), 
+                (EQJOIN(G.D,H.D), 
+                  (EQJOIN(F.C,G.C), 
+                    (EQJOIN(E.B,F.B), 
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ),
+            GET("K")
+          ),
+          GET("L")
+        ),
+        GET("M")
+      ),
+      GET("N")
+    ),
+    GET("O")
+  )

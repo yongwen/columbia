@@ -1,0 +1,9 @@
+//To debug IRPROP problem
+
+(EQJOIN(D.A,E.A), 
+	(EQJOIN(C.Z,D.Z), 
+        	GET ("C"), 
+                GET ("D")
+        ),	
+        GET("E")
+)

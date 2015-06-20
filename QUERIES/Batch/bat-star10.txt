@@ -1,0 +1,215 @@
+NumOfQuery:10
+Query: 1
+//STAR query #2
+
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            )
+
+
+Query: 2
+//STAR query #3
+
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          )
+
+Query: 3
+//STAR query #4
+
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        )
+
+Query: 4
+//STAR query #5
+
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      )
+
+Query: 5
+//STAR query #6
+
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    )
+
+Query: 6
+//STAR query #7
+
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  )
+
+Query: 7
+//STAR query #8
+
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                )
+
+Query: 8
+//STAR query #9
+
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              )
+Query: 9
+//STAR query #10
+
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+Query: 10
+//STAR query #11
+
+          (EQJOIN(A.G,K.G), 
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ),
+            GET("K")
+          )
+

@@ -1,0 +1,314 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\wcol.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\wcol.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Optimizer"
+    BEGIN
+        MENUITEM "&Begin",                      IDD_BEGIN
+        MENUITEM "&Memory",                     IDD_MEMORY
+        MENUITEM SEPARATOR
+        MENUITEM "&Option",                     ID_OPTION
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+    END
+    POPUP "&Quit"
+    BEGIN
+        MENUITEM "&About",                      ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About wcol"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Columbia for Windows Version 3.0",IDC_STATIC,40,10,119,
+                    8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1997",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,32,14,WS_GROUP
+END
+
+IDD_OPTIONDLG DIALOG DISCARDABLE  0, 0, 404, 303
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Option Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,282,33,14
+    PUSHBUTTON      "Cancel",IDCANCEL,102,282,35,14
+    LTEXT           "Catalog File:",IDC_STATIC,7,205,38,10
+    EDITTEXT        IDC_CATFILE_EDIT,7,215,305,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE1,319,214,30,12
+    EDITTEXT        IDC_QUERYEDIT,49,189,256,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE2,314,184,31,12
+    GROUPBOX        "Trace To:",IDC_STATIC,7,8,390,26
+    CONTROL         "File (colout.txt)",IDC_FILE,"Button",BS_AUTOCHECKBOX | 
+                    BS_NOTIFY | WS_TABSTOP,15,17,67,14
+    CONTROL         "Window",IDC_WINDOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,93,18,46,12
+    CONTROL         "GroupPruning",IDC_PRUNING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,74,66,12
+    CONTROL         "CuCardPruning",IDC_CUCARD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,125,74,56,12
+    CONTROL         "COVE script",IDC_COVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,159,18,61,12
+    CONTROL         "EpsilonPruning",IDC_GBLEPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,89,68,12
+    LTEXT           "Cost Model File:",IDC_STATIC,7,230,38,10
+    EDITTEXT        IDC_CMEDIT,7,240,305,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE3,319,234,31,12
+    EDITTEXT        IDC_EPS_EDIT,171,87,51,12,ES_AUTOHSCROLL
+    LTEXT           "Epsilon Value:",IDC_STATIC,125,89,46,10
+    GROUPBOX        "Pruning",IDC_STATIC,7,64,390,39
+    GROUPBOX        "Trace Content:",IDC_STATIC,7,37,390,25
+    CONTROL         "Final SSP",IDC_FINALSSP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,49,55,11
+    CONTROL         "OPEN",IDC_OPEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,94,
+                    48,34,11
+    CONTROL         "SSP",IDC_SSP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,
+                    48,36,11
+    PUSHBUTTON      "Edit...",IDC_EDIT1,357,215,33,11
+    PUSHBUTTON      "Edit...",IDC_EDIT2,357,183,33,11
+    PUSHBUTTON      "Edit...",IDC_EDIT3,357,234,33,11
+    LTEXT           "Rule Set:",IDC_STATIC,7,254,31,9
+    EDITTEXT        IDC_RULESETEDIT,7,264,305,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE4,317,264,32,12
+    PUSHBUTTON      "Edit...",IDC_EDIT4,355,265,34,10
+    GROUPBOX        "Query File:",IDC_STATIC,7,161,390,44
+    CONTROL         "Batch ",IDC_RADIO_BATCH,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,171,35,10
+    CONTROL         "Single",IDC_RADIO_SINGLE,"Button",BS_AUTORADIOBUTTON,13,
+                    190,35,10
+    EDITTEXT        IDC_QUERYEDIT2,49,171,218,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE5,273,169,31,12
+    PUSHBUTTON      "Edit...",IDC_EDIT5,312,170,33,11
+    GROUPBOX        "Halting",IDC_STATIC,7,107,390,47
+    CONTROL         "Halt when number of plans equals to",IDC_HALT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,117,119,12
+    EDITTEXT        IDC_HALT_GRPSIZE,137,116,21,12,ES_AUTOHSCROLL
+    LTEXT           "percent of the group size,  or",IDC_STATIC,167,118,88,
+                    10
+    LTEXT           "in last",IDC_STATIC,23,136,22,10
+    EDITTEXT        IDC_HALT_WINSIZE,45,131,21,12,ES_AUTOHSCROLL
+    LTEXT           "winners, the improvement is less than",IDC_STATIC,71,
+                    136,113,10
+    EDITTEXT        IDC_HALT_IMPR,186,131,21,12,ES_AUTOHSCROLL
+    LTEXT           "percent .",IDC_STATIC,212,134,28,10
+    CONTROL         "SingleLine",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,348,170,49,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "wcol1 MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "wcol1\0"
+            VALUE "LegalCopyright", "Copyright (C) 1997\0"
+            VALUE "OriginalFilename", "wcol1.EXE\0"
+            VALUE "ProductName", "wcol1 Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_OPTIONDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 397
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 296
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BEGIN                "Begin Optimizing"
+    IDD_MEMORY              "Display Memory usage"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\wcol.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,114 @@
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(S.SSK, PS.PSSK),
+						GET("S"),
+						(EQJOIN(P.PPK, PS.PSPK),
+							(SELECT,
+								GET("P"),
+								(OP_AND,
+									(OP_EQ,
+										ATTR("P.PS"),
+										STR("ISIZE")
+									),
+									(OP_LIKE,
+										ATTR("P.PT"),
+										STR("STYPE")
+									)
+								)
+							),
+							GET("PS")
+						)
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION");
+					)
+				)
+			)
+
+(ORDER_BY(S.S_ACCTBAL, N.NN, S.SN, P.PPK),
+	(PROJECT(S.S_ACCTBAL, S.SN, N.NN, P.PPK, P.P_MFGR, S.SA, S.SP, S.SC),
+		(EQJOIN(<P.PPK, PS.PSC>, <PS.PSPK, .MINC>),
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(S.SSK, PS.PSSK),
+						GET("S"),
+						(EQJOIN(P.PPK, PS.PSPK),
+							(SELECT,
+								GET("P"),
+								(OP_AND,
+									(OP_EQ,
+										ATTR("P.PS"),
+										STR("ISIZE")
+									),
+									(OP_LIKE,
+										ATTR("P.PT"),
+										STR("STYPE")
+									)
+								)
+							),
+							GET("PS")
+						)
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION");
+					)
+				)
+			),
+			(AGG_LIST ((PS.PSC AS MINC), (GROUP_BY PS.PSPK)),
+				(EQJOIN(N.NRK, R.RRK),			
+					(EQJOIN(S.SNK, N.NNK),
+						(EQJOIN(S.SSK, PS.PSSK),
+							GET("S"),
+							GET("PS")
+						),
+						GET("N")
+					),
+					(SELECT,
+						GET("R"),
+						(OP_EQ,
+							ATTR ("R.RN"),
+							STR("SREGION")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+(SELECT,
+	GET("R"),
+	(OP_EQ,
+		ATTR("R.RN"),
+		STR("SREGION")
+	)
+)
+
+( AGG_LIST ((PS.PSC AS MINC), (GROUP_BY PS.PSPK)),
+	(EQJOIN(N.NRK, R.RRK),			
+		(EQJOIN(S.SNK, N.NNK),
+			(EQJOIN(S.SSK, PS.PSSK),
+				GET("S"),
+				GET("PS")
+			),
+			GET("N")
+		),
+		(SELECT,
+			GET("R"),
+			(OP_EQ,
+				ATTR ("R.RN"),
+				STR("SREGION")
+			)
+		)
+	)
+)

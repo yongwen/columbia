@@ -1,0 +1,20 @@
+PiggyBack
+NumOfQuery:2
+Query: 1
+(GET("A")) 
+Query: 2            
+(GET("A"))
+  
+NumOfQuery:2
+Query: 1
+(GET("A"))             
+Query: 2            
+(GET("A"))
+
+                              
+
+
+     
+
+
+

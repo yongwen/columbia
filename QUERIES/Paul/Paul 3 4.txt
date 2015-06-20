@@ -1,0 +1,10 @@
+PiggyBack
+NumOfQuery:2
+Query: 1
+(EQJOIN(APrime.X,B.X),
+GET("APrime"),
+GET("B"))
+Query: 2
+(EQJOIN(A.X,BPrime.X),
+GET("A"),
+GET("BPrime"))

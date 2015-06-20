@@ -1,0 +1,98 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 09:37:56 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 09:27: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 502099.576 millisecond
+    Time outside of functions: 485570.321 millisecond
+    Call depth: 4
+    Total functions: 138
+    Total hits: 3911511
+    Function coverage: 51.4%
+    Overhead Calculated 9
+    Overhead Average 9
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 16529.255 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 138
+    Hits in module: 3911511
+    Module function coverage: 51.4%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+    5181.823  31.3     5665.508  34.3    91255 EQJOIN::EQJOIN(class EQJOIN &) (logop.obj)
+    4777.077  28.9     6002.814  36.3   118271 EQJOIN::~EQJOIN(void) (logop.obj)
+    1567.499   9.5     1567.499   9.5    27518 EQJOIN::GetName(void) (logop.obj)
+    1234.169   7.5     1234.169   7.5   120608 LOG_OP::~LOG_OP(void) (logop.obj)
+    1005.944   6.1     1005.944   6.1    19068 KEYS_SET::KEYS_SET(int *,int) (logop.obj)
+     520.285   3.1      520.285   3.1   120608 LOG_OP::LOG_OP(void) (logop.obj)
+     400.443   2.4      400.443   2.4   118271 EQJOIN::operator new(unsigned int) (logop.obj)
+     335.867   2.0      335.867   2.0   118271 EQJOIN::operator delete(void *,unsigned int) (logop.obj)
+     321.004   1.9     1899.050  11.5    27016 EQJOIN::EQJOIN(int *,int *,int) (logop.obj)
+     174.431   1.1      312.922   1.9    26994 EQJOIN::hash(void) (logop.obj)
+     142.777   0.9      138.557   0.8    27003 LOG_OP::GetInitval(void) (logop.obj)
+     140.779   0.9     6091.556  36.9    91255 EQJOIN::Clone(void) (logop.obj)
+     121.590   0.7     6460.272  39.1   118271 EQJOIN::`scalar deleting destructor'(unsigned int) (logop.obj)
+     121.590   0.7     6460.272  39.1   118271 EQJOIN::`vector deleting destructor'(unsigned int) (logop.obj)
+      64.856   0.4      134.214   0.8      502 EQJOIN::FindLogProp(class LOG_PROP * *) (logop.obj)
+      64.233   0.4       98.098   0.6     2313 GET::Clone(void) (logop.obj)
+      47.042   0.3       63.690   0.4     2326 GET::`scalar deleting destructor'(unsigned int) (logop.obj)
+      47.042   0.3       63.690   0.4     2326 GET::`vector deleting destructor'(unsigned int) (logop.obj)
+      35.692   0.2       57.934   0.4      511 SCHEMA::`scalar deleting destructor'(unsigned int) (logop.obj)
+      34.894   0.2       34.894   0.2      511 SCHEMA::SCHEMA(int) (logop.obj)
+      28.760   0.2       33.865   0.2     2313 GET::GET(class GET &) (logop.obj)
+      28.249   0.2       23.759   0.1     8334 EQJOIN::operator==(class OP *) (logop.obj)
+      25.264   0.2       25.264   0.2     8448 ATTR::operator new(unsigned int) (logop.obj)
+      20.147   0.1       20.147   0.1      511 LOG_COLL_PROP::operator new(unsigned int) (logop.obj)
+      19.794   0.1       19.794   0.1     8448 ATTR::operator delete(void *,unsigned int) (logop.obj)
+      19.342   0.1       77.276   0.5      511 LOG_COLL_PROP::~LOG_COLL_PROP(void) (logop.obj)
+      14.286   0.1       14.286   0.1      511 SCHEMA::operator new(unsigned int) (logop.obj)
+       8.456   0.1       16.649   0.1     2326 GET::~GET(void) (logop.obj)
+       4.017   0.0        4.017   0.0    37338 SELECT::GetNameId(void) (logop.obj)
+       3.298   0.0        3.298   0.0     8448 ATTR::ATTR(int,float) (logop.obj)
+       2.951   0.0        2.951   0.0    18669 RM_DUPLICATES::GetNameId(void) (logop.obj)
+       2.448   0.0        2.448   0.0      511 SCHEMA::operator delete(void *,unsigned int) (logop.obj)
+       1.679   0.0        1.679   0.0      511 LOG_COLL_PROP::operator delete(void *,unsigned int) (logop.obj)
+       1.605   0.0        1.605   0.0    23412 GET::GetNameId(void) (logop.obj)
+       1.165   0.0        1.165   0.0       22 GET::GetName(void) (logop.obj)
+       1.000   0.0        2.237   0.0       13 GET::GET(int) (logop.obj)
+       0.969   0.0        0.969   0.0      511 LOG_COLL_PROP::LOG_COLL_PROP(float,float,class SCHEMA *,class KEYS_SET *) (logop.obj)
+       0.919   0.0        0.919   0.0     5321 GET::GetCollection(void) (logop.obj)
+       0.872   0.0       38.546   0.2        9 GET::FindLogProp(class LOG_PROP * *) (logop.obj)
+       0.866   0.0       79.820   0.5      511 LOG_COLL_PROP::`scalar deleting destructor'(unsigned int) (logop.obj)
+       0.866   0.0       79.820   0.5      511 LOG_COLL_PROP::`vector deleting destructor'(unsigned int) (logop.obj)
+       0.646   0.0        0.646   0.0    18669 PROJECT::GetNameId(void) (logop.obj)
+       0.573   0.0        0.573   0.0        1 RM_DUPLICATES::GetName(void) (logop.obj)
+       0.562   0.0        0.679   0.0        3 AGG_LIST::AGG_LIST(int *,int,class CArray<class AGG_OP *,class AGG_OP *> *) (logop.obj)
+       0.556   0.0        0.675   0.0        3 SELECT::SELECT(void) (logop.obj)
+       0.124   0.0        0.124   0.0      299 CArray<class CString,class CString>::GetSize(void) (logop.obj)
+       0.113   0.0        0.113   0.0        3 SELECT::GetName(void) (logop.obj)
+       0.111   0.0        0.111   0.0        3 AGG_LIST::GetName(void) (logop.obj)
+       0.108   0.0        0.108   0.0        3 PROJECT::GetName(void) (logop.obj)
+       0.050   0.0        0.141   0.0        3 AGG_LIST::`scalar deleting destructor'(unsigned int) (logop.obj)
+       0.050   0.0        0.141   0.0        3 AGG_LIST::`vector deleting destructor'(unsigned int) (logop.obj)
+       0.049   0.0        0.131   0.0        3 PROJECT::`scalar deleting destructor'(unsigned int) (logop.obj)
+       0.049   0.0        0.131   0.0        3 PROJECT::`vector deleting destructor'(unsigned int) (logop.obj)
+       0.047   0.0        0.133   0.0        3 SELECT::`scalar deleting destructor'(unsigned int) (logop.obj)
+       0.047   0.0        0.133   0.0        3 SELECT::`vector deleting destructor'(unsigned int) (logop.obj)
+       0.039   0.0        0.153   0.0        3 PROJECT::PROJECT(int *,int) (logop.obj)
+       0.026   0.0        0.026   0.0     1004 SCHEMA::GetSize(void) (logop.obj)
+       0.023   0.0        0.091   0.0        3 AGG_LIST::~AGG_LIST(void) (logop.obj)
+       0.019   0.0        0.086   0.0        9 GET::hash(void) (logop.obj)
+       0.018   0.0        0.082   0.0        3 PROJECT::~PROJECT(void) (logop.obj)
+       0.017   0.0        0.593   0.0        1 RM_DUPLICATES::RM_DUPLICATES(void) (logop.obj)
+       0.017   0.0        0.041   0.0        1 RM_DUPLICATES::`scalar deleting destructor'(unsigned int) (logop.obj)
+       0.017   0.0        0.041   0.0        1 RM_DUPLICATES::`vector deleting destructor'(unsigned int) (logop.obj)
+       0.003   0.0        0.086   0.0        3 SELECT::~SELECT(void) (logop.obj)
+       0.002   0.0        0.024   0.0        1 RM_DUPLICATES::~RM_DUPLICATES(void) (logop.obj)
+       0.000   0.0        0.000   0.0    37338 AGG_LIST::GetNameId(void) (logop.obj)
+       0.000   0.0        0.000   0.0   963259 EQJOIN::GetArity(void) (logop.obj)
+       0.000   0.0        0.000   0.0   471228 EQJOIN::GetNameId(void) (logop.obj)
+       0.000   0.0        0.000   0.0   217293 GET::GetArity(void) (logop.obj)
+       0.000   0.0        0.000   0.0   907174 LOG_OP::is_logical(void) (logop.obj)
+       0.000   0.0        0.000   0.0    16830 SCHEMA::operator[](int) (logop.obj)

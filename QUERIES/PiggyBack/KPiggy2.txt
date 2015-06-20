@@ -1,0 +1,18 @@
+PiggyBack
+NumOfQuery:2
+          
+Query: 1
+
+(EQJOIN (A.X,B.X), 
+         GET ("A"), 
+              GET ("B") 
+                )
+                              
+Query: 2
+(GET("A")) 
+
+
+     
+
+
+

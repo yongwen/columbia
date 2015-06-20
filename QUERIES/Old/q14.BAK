@@ -1,0 +1,22 @@
+(PROJECT(.PROMO_REV),
+	(FUNC_OP(.PROMO AS PROMO_REV),
+		(FUNC_OP(<L.LE, L.LD, P.PT> AS PROMO),
+			(EQJOIN(L.LPK, P.PPK),
+				(SELECT,
+					GET("L"),
+					(OP_AND,
+						(OP_GE,
+							ATTR("L.LSD"),
+							INT("1000")
+						),
+						(OP_LT,
+							ATTR("L.LSD"),
+							INT("1030")
+						)
+					)
+				),
+				GET("P")
+			)
+		)
+	)
+)

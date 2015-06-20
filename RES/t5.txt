@@ -1,0 +1,156 @@
+profile tpcd-8 eps=0.1 supp.obj
+Profile: Function timing, sorted by time
+Date:    Sat Nov 14 21:45:40 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Nov 14 21:18: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 1473543.803 millisecond
+    Time outside of functions: 1451419.512 millisecond
+    Call depth: 3
+    Total functions: 84
+    Total hits: 2659352
+    Function coverage: 61.9%
+    Overhead Calculated 10
+    Overhead Average 10
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 22124.291 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 84
+    Hits in module: 2659352
+    Module function coverage: 61.9%
+
+                                   |    Func      Func+Child        Hit
+ Functions and Callers             |    Time   %     Time     %     Count
+
+PHYS_PROP::operator==(class PHYS_P*|7931.362  35.8 7931.362  35.8 1115719
+
+CopyArray(int *,int) (supp.obj)    |4443.940  20.1 4443.940  20.1 217540
+  ATTR::ATTR(class CString,int *,i*|   0.118   0.0    0.118   0.0     6
+
+PHYS_PROP::PHYS_PROP(class PHYS_PR*|3846.722  17.4 3846.722  17.4 36263
+
+SCHEMA::InSchema(int) (supp.obj)   |1717.309   7.8 1717.309   7.8 129334
+  SCHEMA::Contains(class KEYS_SET *|1359.982  79.2 1359.982  79.2 108218
+
+COST::FinalCost(class COST *,class*|1009.880   4.6 1519.233   6.9 167540
+
+SCHEMA::Contains(class KEYS_SET *)*| 747.911   3.4 2107.892   9.5 71741
+
+COST::operator+=(class COST const *| 510.221   2.3  510.221   2.3 328097
+  COST::FinalCost(class COST *,cla*| 509.352  99.8  509.352  99.8 327759
+
+SCHEMA::UnionSchema(class SCHEMA **| 365.480   1.7  386.822   1.7   470
+
+SCHEMA::~SCHEMA(void) (supp.obj)   | 312.363   1.4  312.363   1.4   492
+
+is_bit_off(unsigned int,int) (supp*| 192.548   0.9  192.548   0.9 265180
+
+lookup2(unsigned long,unsigned lon*| 179.829   0.8  179.829   0.8 94757
+
+bit_on(unsigned int &,int) (supp.o*| 111.281   0.5  111.281   0.5 52414
+
+CONT::CONT(class PHYS_PROP *,class*| 108.182   0.5  108.182   0.5 70046
+
+GetCollId(int) (supp.obj)          | 100.261   0.5  100.261   0.5 40192
+  SCHEMA::GetTableMaxCuCard(int) (*| 100.233 100.0  100.233 100.0 40186
+  SCHEMA::projection(int *,int) (s*|   0.028   0.0    0.028   0.0     6
+
+SCHEMA::GetTableMaxCuCard(int) (su*|  99.047   0.4  199.280   0.9  1954
+
+CArray<class CONT *,class CONT *>:*|  74.353   0.3   74.353   0.3  9155
+  CArray<class CONT *,class CONT **|   0.012   0.0    0.012   0.0     1
+    _$E199 (supp.obj)              |   0.012   0.0    0.012   0.0     1
+
+PHYS_PROP::PHYS_PROP(class KEYS_SE*|  72.876   0.3   72.876   0.3 15664
+
+PHYS_PROP::PHYS_PROP(enum ORDER) (*|  65.765   0.3   65.765   0.3 13955
+
+GetAttName(int) (supp.obj)         |  58.755   0.3   58.755   0.3    31
+  KEYS_SET::Dump(void) (supp.obj)  |  19.834  33.8   19.834  33.8     5
+    PHYS_PROP::Dump(void) (supp.ob*|  19.834  33.8   19.834  33.8     5
+
+GetAttId(class CString,class CStri*|  56.969   0.3   59.967   0.3   240
+  KEYS_SET::AddKey(class CString,c*|  25.640  45.0   26.952  44.9   130
+  ATTR::ATTR(class CString,int *,i*|   1.369   2.4    1.369   2.3     6
+
+SCHEMA::AddAttr(int,class ATTR *) *|  22.038   0.1   22.038   0.1 13018
+  SCHEMA::UnionSchema(class SCHEMA*|  21.341  96.8   21.341  96.8 12910
+  SCHEMA::projection(int *,int) (s*|   0.592   2.7    0.592   2.7     6
+
+EqualArray(int *,int *,int) (supp.*|  16.446   0.1   16.446   0.1  9940
+
+KEYS_SET::CopyOut(void) (supp.obj) |  15.523   0.1   15.523   0.1   528
+
+KEYS_SET::AddKey(int) (supp.obj)   |  13.610   0.1   13.610   0.1   184
+
+COST::Dump(void) (supp.obj)        |  11.078   0.1   11.078   0.1    30
+
+KEYS_SET::AddKey(class CString,cla*|  10.597   0.0   37.548   0.2   130
+
+GetCollId(class CString) (supp.obj*|   6.318   0.0    6.318   0.0   266
+  GetAttId(class CString,class CSt*|   2.998  47.5    2.998  47.5   110
+    KEYS_SET::AddKey(class CString*|   1.312  20.8    1.312  20.8    28
+
+SkipSpace(char *) (supp.obj)       |   3.371   0.0    3.371   0.0  2729
+  parseString(char *) (supp.obj)   |   0.595  17.7    0.595  17.7   642
+  IsCommentOrBlankLine(char *) (su*|   0.349  10.3    0.349  10.3   427
+
+GetIndId(class CString,class CStri*|   2.817   0.0    2.817   0.0    16
+
+IsCommentOrBlankLine(char *) (supp*|   2.547   0.0    2.896   0.0   427
+
+OPT_STAT::Dump(void) (supp.obj)    |   2.107   0.0    2.107   0.0     1
+
+KEYS_SET::ContainKey(int) (supp.ob*|   2.021   0.0    2.021   0.0   354
+
+parseString(char *) (supp.obj)     |   1.969   0.0    2.564   0.0   642
+
+PHYS_PROP::Dump(void) (supp.obj)   |   1.814   0.0   22.950   0.1     5
+
+atoCollOrder(char *) (supp.obj)    |   1.380   0.0    1.380   0.0    16
+
+KEYS_SET::Dump(void) (supp.obj)    |   1.301   0.0   21.135   0.1     5
+  PHYS_PROP::Dump(void) (supp.obj)*|   1.301 100.0   21.135 100.0     5
+
+GetAttId(class CString) (supp.obj) |   0.831   0.0    0.831   0.0    12
+
+ATTR::ATTR(class CString,int *,int*|   0.809   0.0    2.315   0.0     6
+
+GetBitIndId(class CString,class CS*|   0.707   0.0    0.707   0.0     4
+
+GetCollName(int) (supp.obj)        |   0.550   0.0    0.550   0.0    46
+
+SCHEMA::GetTableWidth(int) (supp.o*|   0.472   0.0    0.472   0.0    47
+
+atoDomain(char *) (supp.obj)       |   0.417   0.0    0.417   0.0   104
+
+SCHEMA::projection(int *,int) (sup*|   0.313   0.0    0.934   0.0     4
+
+atoIndexOrder(char *) (supp.obj)   |   0.105   0.0    0.105   0.0    16
+
+atoKeyOrder(char *) (supp.obj)     |   0.034   0.0    0.034   0.0     8
+
+ATTR_EXP::GetAttNew(void) (supp.ob*|   0.019   0.0    0.019   0.0    24
+  ATTR::ATTR(class CString,int *,i*|   0.019 100.0    0.019 100.0    24
+
+CArray<class CONT *,class CONT *>:*|   0.018   0.0    0.030   0.0     1
+  _$E199 (supp.obj)                |   0.018 100.0    0.030 100.0     1
+
+_$E201 (supp.obj)                  |   0.015   0.0    0.015   0.0     1
+  _$E202 (supp.obj)                |   0.015 100.0    0.015 100.0     1
+
+CArray<class CONT *,class CONT *>:*|   0.004   0.0    0.004   0.0     1
+  _$E198 (supp.obj)                |   0.004 100.0    0.004 100.0     1
+    _$E202 (supp.obj)              |   0.004 100.0    0.004 100.0     1
+
+_$E199 (supp.obj)                  |   0.004   0.0    0.034   0.0     1
+
+_$E202 (supp.obj)                  |   0.003   0.0    0.022   0.0     1
+
+_$E198 (supp.obj)                  |   0.000   0.0    0.004   0.0     1
+  _$E202 (supp.obj)                |   0.000   0.0    0.004 100.0     1
+

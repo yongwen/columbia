@@ -1,0 +1,36 @@
+(PROJECT (.REV),
+	( AGG_LIST ((<L.LD, L.LE> AS REV), (GROUP_BY <>)),
+		(SELECT,
+			GET("L"),
+			(OP_AND,
+				(OP_GT,
+					ATTR("L.LQ"),
+					INT("5")
+				),
+				(OP_AND,
+					(OP_AND,
+						(OP_GE,
+							ATTR("L.LSD"),
+							INT("1000")
+						),
+						(OP_LT,
+							ATTR("L.LSD"),
+							INT("1365")
+						)
+					),
+					(OP_AND,
+						(OP_GE,
+							ATTR("L.LD"),
+							INT("0.02")
+						),
+						(OP_LE,
+							ATTR("L.LD"),
+							INT("0.04")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+

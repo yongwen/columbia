@@ -1,0 +1,13 @@
+			(EQJOIN(C.CNK, N.NNK),
+				(EQJOIN(O.OOK, L.LOK),
+					(EQJOIN(C.CCK, O.OCK),
+						GET("C"),
+						GET("O")
+							
+					),
+					GET("L")
+				),
+				GET("N")
+			)
+		)
+

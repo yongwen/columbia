@@ -1,0 +1,256 @@
+//Catalog text file for ABC
+// 05-17-97
+
+RelName: A		// string_t 	
+Card: 500		// real_t
+UCard: 500	// real_t
+Width: 0.01		// real_t
+Order: sorted	// Enum: sorted hashed heap
+OrderKey: (X)	// string_tCollection : Collection of Attribute
+NumOfAttr: 17	// int_t
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A 			real_t		5000	    5000	0	    
+B			string_t	5000
+C           string_t	5000
+D 			real_t		5000	    5000	0	    
+E			string_t	5000
+H           string_t	5000
+G 			real_t		5000	    5000	0	    
+H			string_t	5000
+I           string_t	5000
+J 			real_t		5000	    5000	0	    
+K			string_t	5000
+L           string_t	5000
+M			string_t	5000
+N           string_t	5000
+X           real_t		5000    5000	0    Primary Key
+Y           string_t	5000	
+Z           int_t		5000	    5000	0
+NumofIndex: 1
+//IndexName(S) 		Attribute (K)		Order (E) 
+A_X                 	(X)		            btree
+
+RelName: B
+Card: 5000
+UCard: 5000
+Width: 0.01
+Order: hashed			
+OrderKey: (X)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+X           real_t		5000		5000    0	    
+Y           real_t		5000		5000    0	    Key
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+B_X             (X)	            hash
+
+RelName: C
+Card: 50000
+UCard: 50000
+Width: 0.01		
+Order: hashed		
+OrderKey: (Y)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Y           real_t		5000		5000    0	    Key
+Z           real_t		5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+C_Y             (Y)	            hash
+
+
+RelName: D
+Card: 500000
+UCard: 500000       
+Width: 0.01		
+Order: sorted		
+OrderKey: (Z)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Z           real_t	5000		5000    0	    Key
+A           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+D_Z             (Z)	            btree
+
+RelName: E
+Card: 5000000
+UCard: 5000000
+Width: 0.01
+Order: sorted			
+OrderKey: (A)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A           real_t	5000		5000    0	    
+B           real_t	5000		5000    0	    Key
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+E_A             (A)	            btree
+
+RelName: F
+Card: 50000000			    
+UCard: 50000000       
+Width: 0.01
+Order: sorted		
+OrderKey: (B)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+B           real_t	5000		5000	0	    Key
+C           real_t	5000		5000	0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+F_B             (B)	            btree
+
+RelName: G
+Card: 500000000	
+UCard: 500000000	
+Width: 0.01
+Order: sorted		
+OrderKey: (C)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+C           real_t	5000		5000	0	    Key
+D           real_t	5000		5000	0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+G_C             (C)	            btree
+
+RelName: H
+Card: 5000000000			    
+UCard: 5000000000       
+Width: 0.01
+Order: sorted		
+OrderKey: (D)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+D           real_t	5000		5000    0	    Key
+E           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+H_D             (D)	            btree
+
+RelName: I
+Card: 50000000000
+UCard: 50000000000       
+Width: 0.01
+Order: sorted		
+OrderKey: (E)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+E           real_t	5000		5000    0	    Key
+F           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+I_E             (E)	            btree
+
+RelName: J
+Card: 500000000000		
+UCard: 500000000000       
+Width: 0.01
+Order: sorted		
+OrderKey: (F)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+F           real_t	5000		5000    0	    Key
+G           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+J_F             (F)	            btree
+
+RelName: K
+Card: 5000000000000		
+UCard: 5000000000000		
+Width: 0.01
+Order: sorted		
+OrderKey: (G)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+G           real_t	5000		5000    0	    Key
+H           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+K_G             (G)	            btree
+
+RelName: L
+Card: 50000000000000		
+UCard: 50000000000000		
+Width: 0.01
+Order: sorted		
+OrderKey: (H)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+H           real_t	5000		5000    0	    Key
+I           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+L_H             (H)	            btree
+
+RelName: M
+Card: 5000		
+UCard: 5000     
+Width: 0.01
+Order: sorted		
+OrderKey: (I)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+I           real_t	5000		5000    0	    Key
+J           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+M_I             (I)	            btree
+
+RelName: N
+Card: 5000		
+UCard: 5000       
+Width: 0.01
+Order: sorted		
+OrderKey: (J)	        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+J           real_t	5000		5000    0	    Key
+K           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+N_J             (J)	            btree
+
+RelName: O
+Card: 5000			
+UCard: 5000       
+Width: 0.01
+Order: sorted			
+OrderKey: (K)	        
+NumOfAttr: 2			
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+K           real_t	5000		5000    0	    Key
+L           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+O_K             (K)	            btree
+
+RelName: P
+Card: 5000		
+UCard: 5000       
+Width: 0.01
+Order: sorted			
+OrderKey: (L)	      
+NumOfAttr: 2			
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+L           real_t	5000		5000    0	    Key
+M           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+P_L             (L)	            btree
+
+RelName: Q
+Card: 5000		
+UCard: 5000       
+Width: 0.01
+Order: sorted			
+OrderKey: (M)	      
+NumOfAttr: 2			
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+M           real_t	5000		5000    0	    Key
+N           real_t	5000		5000    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+Q_M             (M)	            btree

@@ -1,0 +1,31 @@
+ //DUMMY(Chain5, 2-Chain5)
+
+(DUMMY(),
+                      (EQJOIN(D.A,E.A), 
+                        (EQJOIN(C.Z,D.Z), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      )
+,
+                      (EQJOIN(F.C,G.C), 
+                        (EQJOIN(C.Z,F.B), 
+                          (EQJOIN (B.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("F")
+                        ),	
+                        GET("G")
+                      )
+)

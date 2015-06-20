@@ -1,0 +1,679 @@
+NumOfQuery:17
+Query: 1
+(ORDER_BY (<L.LR, L.LLS>),
+   (PROJECT (.SQTY, .SBP, .SDP, .SCH, .AQTY, .APR, .ADISC, .CONT, L.LR, L.LLS),
+	( AGG_LIST ((L.LQ AS SQTY, L.LE AS SBP, <L.LE, L.LD> AS SDP, <L.LE, L.LD, L.LT> AS SCH, 
+		     L.LQ AS AQTY, L.LE AS APR, L.LD AS ADISC, <L.LOK, L.LPK, L.LSK, L.LN, L.LQ,
+		     L.LE, L.LD, L.LT, L.LR, L.LLS, L.LSD, L.LCD, L.LRD, L.LSM, 
+		     L.LSI> AS CONT), (GROUP_BY <L.LR, L.LLS>)),
+		(SELECT,
+			GET("L"),
+			(OP_LE,
+				ATTR ("L.LSD"),
+				INT("2525")
+			)
+		)
+	)
+   )
+)
+
+Query: 2
+(ORDER_BY(<S.S_ACCTBAL, N.NN, S.SN, P.PPK>),
+	(PROJECT(S.S_ACCTBAL, S.SN, N.NN, P.PPK, P.P_MFGR, S.SA, S.SP, S.SC),
+		(EQJOIN(<P.PPK, PS.PSC>, <PS.PSPK, .MINC>),
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(S.SSK, PS.PSSK),
+						GET("S"),
+						(EQJOIN(P.PPK, PS.PSPK),
+							(SELECT,
+								GET("P"),
+								(OP_AND,
+									(OP_EQ,
+										ATTR("P.PS"),
+										STR("ISIZE")
+									),
+									(OP_LIKE,
+										ATTR("P.PT"),
+										STR("STYPE")
+									)
+								)
+							),
+							GET("PS")
+						)
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION");
+					)
+				)
+			),
+			(AGG_LIST ((PS.PSC AS MINC), (GROUP_BY PS.PSPK)),
+				(EQJOIN(N.NRK, R.RRK),			
+					(EQJOIN(S.SNK, N.NNK),
+						(EQJOIN(S.SSK, PS.PSSK),
+							GET("S"),
+							GET("PS")
+						),
+						GET("N")
+					),
+					(SELECT,
+						GET("R"),
+						(OP_EQ,
+							ATTR ("R.RN"),
+							STR("SREGION")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 3
+(ORDER_BY (<.REV, O.OD>),
+	(PROJECT (L.LOK, .REV, O.OD, O.OS),
+	   	( AGG_LIST ((<L.LD, L.LE> AS REV), (GROUP_BY <L.LOK, O.OS, O.OD>)),
+			(EQJOIN(L.LOK, O.OOK),
+				(SELECT,
+					GET("L"),
+					(OP_GT,
+						ATTR ("L.LSD"),
+						INT("1998")
+					)
+				),
+				(EQJOIN(O.OCK, C.CCK),
+					(SELECT,
+						GET("O"),
+						(OP_LT,
+							ATTR ("O.OD"),
+							INT("1998")
+						)
+					),
+					(SELECT,
+						GET("C"),
+						(OP_EQ,
+							ATTR ("C.CM"),
+							INT("XXX")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 4
+(ORDER_BY(O.OP),
+	(PROJECT(O.OP, .CNT),
+		(AGG_LIST((<L.LOK, O.OOK> AS CNT), (GROUP_BY O.OP)),
+			(EQJOIN(O.OOK, L.LOK),
+				(SELECT,
+					GET("O"),
+					(OP_AND,
+						(OP_GE,
+							ATTR("O.OD"),
+							INT("1550")
+						),
+						(OP_LT,
+							ATTR("O.OD"),
+							INT("1640")
+						)
+					)
+				),
+				(RM_DUPLICATES,
+					(PROJECT(L.LOK),
+						(SELECT,
+							GET("L"),
+							(OP_LT,
+								ATTR("L.LCD"),
+								ATTR("L.LRD")
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 5
+(ORDER_BY(.REV),
+	(PROJECT(.REV, N.NN),
+		(AGG_LIST((<L.LE, L.LD> AS REV), (GROUP_BY N.NN)),
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(<L.LSK, C.CNK>, <S.SSK, S.SNK>),
+						(EQJOIN(O.OOK, L.LOK),
+							(EQJOIN(C.CCK, O.OCK),
+								GET("C"),
+								(SELECT,
+									GET("O"),
+									(OP_AND,
+										(OP_LT,
+											ATTR("O.OD"),
+											INT("1356")
+										),
+										(OP_GE,
+											ATTR("O.OD"),
+											INT("1000")
+										)
+									)
+								)
+							),
+							GET("L")
+						),
+						GET("S")
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION")
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 6
+(PROJECT (.REV),
+	( AGG_LIST ((<L.LD, L.LE> AS REV), (GROUP_BY <>)),
+		(SELECT,
+			GET("L"),
+			(OP_AND,
+				(OP_GT,
+					ATTR("L.LQ"),
+					INT("5")
+				),
+				(OP_AND,
+					(OP_AND,
+						(OP_GE,
+							ATTR("L.LSD"),
+							INT("1000")
+						),
+						(OP_LT,
+							ATTR("L.LSD"),
+							INT("1365")
+						)
+					),
+					(OP_AND,
+						(OP_GE,
+							ATTR("L.LD"),
+							INT("0.02")
+						),
+						(OP_LE,
+							ATTR("L.LD"),
+							INT("0.04")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 7
+(ORDER_BY(<S.SNK, C.CNK, .YEAR>),	
+	(PROJECT(S.SNK, C.CNK, .YEAR, .SUM),
+		(AGG_LIST((.VOL AS SUM), (GROUP_BY <S.SNK, C.CNK, .YEAR>)),
+			(SELECT,
+				(EQJOIN(C.CNK, N2.NNK),
+					(EQJOIN(S.SNK, N1.NNK),
+						(EQJOIN(O.OCK, C.CCK),
+							(EQJOIN(L.LOK, O.OOK),
+								(EQJOIN(S.SSK, L.LSK),
+									GET("S"),
+									(FUNC_OP(L.LSD AS YEAR),
+										(FUNC_OP(<L.LE, L.LD> AS VOL),
+											(SELECT,
+												GET("L"),
+												(OP_AND,
+													(OP_GE,
+														ATTR("L.LSD"),
+														INT("1095")
+													),
+													(OP_LE,
+														ATTR("L.LSD"),
+														INT("1824")
+													)
+												)
+											)
+										)
+									)
+								),
+								GET("O")
+							),
+							GET("C")
+						),
+						GET("N", "N1")
+					),
+					GET("N", "N2")
+				),
+				(OP_OR,
+					(OP_AND,
+						(OP_EQ,
+							ATTR("N1.NN"),
+							STR("SNATION1")
+						),
+						(OP_EQ,
+							ATTR("N2.NN"),
+							STR("SNATION2")
+						)
+					),
+					(OP_AND,
+						(OP_EQ,
+							ATTR("N1.NN"),
+							STR("SNATION2")
+						),
+						(OP_EQ,
+							ATTR("N2.NN"),
+							STR("SNATION1")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 8
+(ORDER_BY(.YEAR),
+	(PROJECT(.YEAR, .MKT),
+		(AGG_LIST((<.VOL, N.NNK> AS MKT), (GROUP_BY .YEAR)),
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(C.CNK, N.NNK),
+						(EQJOIN(O.OCK, C.CCK),
+							(EQJOIN(L.LOK, O.OOK),
+								(EQJOIN(<P.PPK, S.SSK>, <L.LPK, L.LSK>),
+									(EQJOIN(<>,<>),
+										(SELECT,
+											GET("P"),
+											(OP_EQ,
+												ATTR("P.PT"),
+												STR("STYPE")
+											)
+										),
+										GET("S")
+									),
+									(FUNC_OP(<L.LD, L.LE> AS VOL),
+										GET("L")
+									)
+								),
+								(FUNC_OP(O.OD AS YEAR),
+									(SELECT,
+										GET("O"),
+										(OP_AND,
+											(OP_GE,
+												ATTR("O.OD"),
+												STR("1095")
+											),
+											(OP_LE,
+												ATTR("O.OD"),
+												STR("1824")
+											)
+										)
+									)
+								)
+							),
+							GET("C")
+						),
+						GET("N")
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION")
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 9
+(ORDER_BY(<N.NN, .YEAR>),
+	(PROJECT(N.NN, .YEAR, .SUM),
+		(AGG_LIST((.AMOUNT AS SUM), (GROUP_BY <N.NN, .YEAR>)),
+			(FUNC_OP(<L.LE, L.LD, L.LQ, PS.PSC> AS AMOUNT),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(L.LOK, O.OOK),
+						(EQJOIN(L.LPK, P.PPK),
+							(EQJOIN(<L.LSK, L.LPK>, <PS.PSSK, PS.PSPK>),
+								(EQJOIN(S.SSK, L.LSK),
+									GET("S"),
+									GET("L")
+								),
+								GET("PS")
+							),
+							(SELECT,
+								GET("P"),
+								(OP_LIKE,
+									ATTR("P.PN"),
+									STR("COLOR")
+								)
+							)
+						),
+						(FUNC_OP(O.OD AS YEAR),
+							GET("O")
+						)
+					),
+					GET("N")
+				)
+			)
+		)
+	)
+)
+
+Query: 10
+(ORDER_BY(.REV),
+	(PROJECT(C.CCK, C.CN, C.C_ACCTBAL, C.CP, N.NN, C.CA, C.C_COMMENT, .REV),
+		(AGG_LIST((<L.LD, L.LE> AS REV), (GROUP_BY <C.CCK, C.CN, C.C_ACCTBAL, C.CP, N.NN, C.CA, C.C_COMMENT>)),
+			(EQJOIN(C.CNK, N.NNK),
+				(EQJOIN(O.OOK, L.LOK),
+					(EQJOIN(C.CCK, O.OCK),
+						GET("C"),
+						(SELECT,
+							GET("O"),
+							(OP_AND,
+								(OP_GE,
+									ATTR("O.OD"),
+									INT("1000")
+								),
+								(OP_LT,
+									ATTR("O.OD"),
+									INT("1090")
+								)
+							)
+						)
+					),
+					(SELECT,
+						GET("L"),
+						(OP_EQ,
+							ATTR("L.LR"),
+							STR("R")
+						)
+					)
+				),
+				GET("N")
+			)
+		)
+	)
+)
+
+Query: 11
+(ORDER_BY(.VALUE),
+	(PROJECT(PS.PSPK, .VALUE),
+		(SELECT,
+			(AGG_LIST((<PS.PSC, PS.PSA> AS VALUE), (GROUP_BY PS.PSPK)),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(PS.PSSK, S.SSK),
+						GET("PS"),
+						GET("S")
+					),
+					(SELECT,
+						GET("N"),
+						(OP_EQ,
+							ATTR("N.NN"),
+							STR("SNATION")
+						)
+					)
+				)
+			),
+			(OP_GT,
+				ATTR(".VALUE"),
+				(PROJECT(.FRACTION),
+					(AGG_LIST((.VALUE AS FRACTION), (GROUP_BY <>)),
+						(AGG_LIST((<PS.PSC, PS.PSA> AS VALUE), (GROUP_BY PS.PSPK)),
+							(EQJOIN(S.SNK, N.NNK),
+								(EQJOIN(PS.PSSK, S.SSK),
+									GET("PS"),
+									GET("S")
+								),
+								(SELECT,
+									GET("N"),
+									(OP_EQ,
+										ATTR("N.NN"),
+										STR("SNATION")
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 12
+(ORDER_BY(L.LSM),
+	(PROJECT(.LINE_COUNT, L.LSM),
+		(AGG_LIST((O.OP AS LINE_COUNT), (GROUP_BY L.LSM)),
+			(EQJOIN(O.OOK, L.LOK),
+				GET("O"),
+				(SELECT,
+					GET("L"),
+					(OP_AND,
+						(OP_AND,
+							(OP_AND,
+								(OP_AND,
+									(OP_GE,
+										ATTR("L.LRD"),
+										INT("1000")
+									),
+									(OP_LT,
+										ATTR("L.LRD"),
+										INT("1365")
+									)
+								),
+								(OP_LT,
+									ATTR("L.LSD"),
+									ATTR("L.LCD")
+								)
+							),
+							(OP_LT,
+								ATTR("L.LCD"),
+								ATTR("L.LRD")
+							)
+						),
+						(OP_OR,
+							(OP_EQ,
+								ATTR("L.LSM"),
+								STR("MODE1")
+							),
+							(OP_EQ,
+								ATTR("L.LSM"),
+								STR("MODE2")
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 13
+(ORDER_BY(.YEAR),
+	(PROJECT(.SUM_REV, .YEAR),
+		(AGG_LIST((.REV AS SUM_REV), (GROUP_BY .YEAR)),
+			(FUNC_OP(O.OD AS YEAR),
+				(EQJOIN(L.LOK, O.OOK),
+					(FUNC_OP(<L.LD, L.LE> AS REV),
+						(SELECT,
+							GET("L"),
+							(OP_EQ,
+								ATTR("L.LR"),
+								STR("R")
+							)
+						)
+					),
+					(SELECT,
+						GET("O"),
+						(OP_EQ,
+							ATTR("O.O_CLERK"),
+							STR("SCLERK")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 14
+(PROJECT(.PROMO_REV),
+	(FUNC_OP(<.PROMO, .SUM> AS PROMO_REV),
+		(AGG_LIST((<L.LE, L.LD, P.PT> AS PROMO, <L.LE, L.LD> AS SUM), (GROUP_BY <>)),
+			(EQJOIN(L.LPK, P.PPK),
+				(SELECT,
+					GET("L"),
+					(OP_AND,
+						(OP_GE,
+							ATTR("L.LSD"),
+							INT("1000")
+						),
+						(OP_LT,
+							ATTR("L.LSD"),
+							INT("1030")
+						)
+					)
+				),
+				GET("P")
+			)
+		)
+	)
+)
+
+Query: 15
+(ORDER_BY(S.SSK),
+	(PROJECT(S.SSK, S.SN, S.SA, S.SP, .TOTAL_REV),
+		(SELECT,
+			(EQJOIN(L.LSK, S.SSK),
+				(AGG_LIST((<L.LE, L.LD> AS TOTAL_REV), (GROUP_BY L.LSK)),
+					(SELECT,
+						GET("L"),
+						(OP_AND,
+							(OP_GE,
+								ATTR("L.LSD"),
+								INT("1000")
+							),
+							(OP_LT,
+								ATTR("L.LSD"),
+								INT("1090")
+							)
+						)
+					)
+				),
+				GET("S")
+			),
+			(OP_EQ,
+				ATTR(".TOTAL_REV"),
+				INT("IMAX")
+			)
+		)
+	)
+)
+
+Query: 16
+(ORDER_BY(<.CNT, P.PB, P.PT, P.PS>),
+	(PROJECT(P.PB, P.PT, P.PS, .CNT),
+		(AGG_LIST((PS.PSPK AS CNT), (GROUP_BY <P.PB, P.PT, P.PS>)),
+			(EQJOIN(PS.PSSK, S.SSK),
+				(EQJOIN(P.PPK, PS.PSPK),
+					(SELECT,
+						GET("P"),
+						(OP_AND,
+							(OP_AND,
+								(OP_NE,
+									ATTR("P.PB"),
+									STR("SBRAND")
+								),
+								(OP_NOT,
+									(OP_LIKE,
+										ATTR("P.PT"),
+										STR("STYPE")
+									)
+								)
+							),
+							(OP_IN,
+								ATTR("P.PS"),
+								SET("SIZE1, SIZE2, SIZE3, SIZE4, SIZE5, SIZE6, SIZE7, SIZE8")
+							)
+						)
+					),
+					GET("PS")
+				),
+				(SELECT,
+					GET("S"),
+					(OP_NOT,
+						(OP_LIKE,
+							ATTR("S.SC"),
+							STR("SBBB")
+						)
+					)
+				)
+			)
+		)
+	)
+)
+
+Query: 17
+(PROJECT(.AVG_YEARLY),
+	(AGG_LIST((L1.LE AS AVG_YEARLY), (GROUP_BY <>)),
+		(SELECT,
+			(EQJOIN(P.PPK, L2.LPK),
+				(EQJOIN(L1.LPK, P.PPK),
+					GET("L", "L1"),
+					(SELECT,
+						GET("P"),
+						(OP_AND,
+							(OP_EQ,
+								ATTR("P.PB"),
+								STR("SBRAND")
+							),
+							(OP_EQ,
+								ATTR("P.PC"),
+								STR("SCON")
+							)
+						)
+					)
+				),
+				(AGG_LIST((L2.LQ AS LQUANTITY), (GROUP_BY L2.LPK)),
+					(EQJOIN(L2.LPK, P.PPK),
+						GET("L", "L2"),
+						(SELECT,
+							GET("P"),
+							(OP_AND,
+								(OP_EQ,
+									ATTR("P.PB"),
+									STR("SBRAND")
+								),
+								(OP_EQ,
+									ATTR("P.PC"),
+									STR("SCON")
+								)
+							)
+						)
+					)
+				)
+			),
+			(OP_LT,
+				ATTR("L1.LQ"),
+				ATTR(".LQUANTITY")
+			)
+		)
+	)
+)

@@ -1,0 +1,331 @@
+NumOfQuery:11
+Query: 1
+// straight up, 10-way chain
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+Query: 2
+// APrime
+            (EQJOIN(APrime.F,J.F), 
+              (EQJOIN(APrime.E,I.E), 
+                (EQJOIN(APrime.D,H.D), 
+                  (EQJOIN(APrime.C,G.C), 
+                    (EQJOIN(APrime.B,F.B), 
+                      (EQJOIN(APrime.A,E.A), 
+                        (EQJOIN(APrime.Z,D.Z), 
+                          (EQJOIN (APrime.Y,C.Y), 
+                            (EQJOIN (APrime.X,B.X), 
+                              GET ("APrime"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+Query: 3
+// BPrime
+           (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,BPrime.X), 
+                              GET ("A"), 
+                              GET ("BPrime") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ) 
+Query: 4
+// CPrime
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,CPrime.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("CPrime") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ) 
+Query: 5
+// DPrime
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,DPrime.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("DPrime")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ) 
+Query: 6
+// EPrime
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,EPrime.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("EPrime")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            )
+Query: 7
+// FPrime
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,FPrime.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("FPrime") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ) 
+Query: 8
+// GPrime
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,GPrime.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("GPrime")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ) 
+Query: 9
+// HPrime
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,HPrime.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("HPrime")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ) 
+Query: 10
+// IPrime 
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,IPrime.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("IPrime")
+              ),
+              GET("J")
+            ) 
+Query: 11
+// JPrime
+            (EQJOIN(A.F,JPrime.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ), 
+                          GET ("D")
+                        ), 
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("JPrime")
+            )

@@ -1,0 +1,289 @@
+//Catalog text file for ABC
+// 05-17-97
+
+RelName: A		// string_t 	
+Card: 4096		// real_t
+UCard: 4096	// real_t
+Width: 0.01		// real_t
+Order: sorted	// Enum: sorted hashed heap
+OrderKey: (X)	// string_tCollection : Collection of Attribute
+KeyOrder: (ascending)
+CandidateKey: ()
+NumOfAttr: 17	// int_t
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A 			real_t		4096	    4096	0	    
+B			string_t	4096
+C           string_t	4096
+D 			real_t		4096	    4096	0	    
+E			string_t	4096
+F			string_t	4096
+H           string_t	4096
+G 			real_t		4096	    4096	0	    
+H			string_t	4096
+I           string_t	4096
+J 			real_t		4096	    4096	0	    
+K			string_t	4096
+L           string_t	4096
+M			string_t	4096
+N           string_t	4096
+X           real_t		4096    4096	0    Primary Key
+Y           string_t	4096	
+Z           int_t		4096	    4096	0
+NumofIndex: 1
+//IndexName(S) 		Attribute (K)		Order (E) 
+A_X                 	(X)		            btree
+
+RelName: B
+Card: 4096
+UCard: 4096
+Width: 0.01
+Order: hashed			
+OrderKey: (X)	
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+X           real_t		4096		4096    0	    
+Y           real_t		4096		4096    0	    Key
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+B_X             (X)	            hash
+
+RelName: C
+Card: 4096			    
+UCard: 4096
+Width: 0.01		
+Order: hashed		
+OrderKey: (Y)	
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Y           real_t		4096		4096    0	    Key
+Z           real_t		4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+C_Y             (Y)	            hash
+
+
+RelName: D
+Card: 4096			 
+UCard: 4096       
+Width: 0.01		
+Order: sorted		
+OrderKey: (Z)
+KeyOrder: (ascending)	
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+Z           real_t	4096		4096    0	    Key
+A           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+D_Z             (Z)	            btree
+
+RelName: E
+Card: 4096
+UCard: 4096
+Width: 0.01
+Order: sorted			
+OrderKey: (A)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A           real_t	4096		4096    0	    
+B           real_t	4096		4096    0	    Key
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+E_A             (A)	            btree
+
+RelName: F
+Card: 4096			    
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (B)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+B           real_t	4096		4096	0	    Key
+C           real_t	4096		4096	0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+F_B             (B)	            btree
+
+RelName: G
+Card: 4096	
+UCard: 4096	
+Width: 0.01
+Order: sorted		
+OrderKey: (C)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+C           real_t	4096		4096	0	    Key
+D           real_t	4096		4096	0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+G_C             (C)	            btree
+
+RelName: H
+Card: 4096			    
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (D)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+D           real_t	4096		4096    0	    Key
+E           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+H_D             (D)	            btree
+
+RelName: I
+Card: 4096
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (E)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+E           real_t	4096		4096    0	    Key
+F           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+I_E             (E)	            btree
+
+RelName: J
+Card: 4096		
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (F)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+F           real_t	4096		4096    0	    Key
+G           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+J_F             (F)	            btree
+
+RelName: K
+Card: 4096		
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (G)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+G           real_t	4096		4096    0	    Key
+H           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+K_G             (G)	            btree
+
+RelName: L
+Card: 4096		
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (H)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+H           real_t	4096		4096    0	    Key
+I           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+L_H             (H)	            btree
+
+RelName: M
+Card: 4096		
+UCard: 4096     
+Width: 0.01
+Order: sorted		
+OrderKey: (I)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+I           real_t	4096		4096    0	    Key
+J           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+M_I             (I)	            btree
+
+RelName: N
+Card: 4096		
+UCard: 4096       
+Width: 0.01
+Order: sorted		
+OrderKey: (J)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2		
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+J           real_t	4096		4096    0	    Key
+K           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+N_J             (J)	            btree
+
+RelName: O
+Card: 4096			
+UCard: 4096       
+Width: 0.01
+Order: sorted			
+OrderKey: (K)	
+KeyOrder: (ascending)
+CandidateKey: ()        
+NumOfAttr: 2			
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+K           real_t	4096		4096    0	    Key
+L           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+O_K             (K)	            btree
+
+RelName: P
+Card: 4096		
+UCard: 4096       
+Width: 0.01
+Order: sorted			
+OrderKey: (L)	
+KeyOrder: (ascending)
+CandidateKey: ()      
+NumOfAttr: 2			
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+L           real_t	4096		4096    0	    Key
+M           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+P_L             (L)	            btree
+
+RelName: Q
+Card: 4096		
+UCard: 4096       
+Width: 0.01
+Order: sorted			
+OrderKey: (M)	
+KeyOrder: (ascending)
+CandidateKey: ()      
+NumOfAttr: 2			
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+M           real_t	4096		4096    0	    Key
+N           real_t	4096		4096    0	    
+NumofIndex: 1
+//IndexName(S) 	Attribute (K)	Order (E) 
+Q_M             (M)	            btree

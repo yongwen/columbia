@@ -1,0 +1,9 @@
+//CHAIN query #3 with one table changed
+
+                          (EQJOIN (B.Y,D.Z), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("D") 
+                          )

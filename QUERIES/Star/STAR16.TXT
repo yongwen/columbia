@@ -1,0 +1,48 @@
+//STAR query #16
+
+ (EQJOIN(A.L,P.L), 
+  (EQJOIN(A.K,O.K), 
+    (EQJOIN(A.J,N.J), 
+      (EQJOIN(A.I,M.I), 
+        (EQJOIN(A.H,L.H), 
+          (EQJOIN(A.G,K.G), 
+            (EQJOIN(A.F,J.F), 
+              (EQJOIN(A.E,I.E), 
+                (EQJOIN(A.D,H.D), 
+                  (EQJOIN(A.C,G.C), 
+                    (EQJOIN(A.B,F.B), 
+                      (EQJOIN(A.A,E.A), 
+                        (EQJOIN(A.Z,D.Z), 
+                          (EQJOIN (A.Y,C.Y), 
+                            (EQJOIN (A.X,B.X), 
+                              GET ("A"), 
+                              GET ("B") 
+                            ),
+                            GET ("C") 
+                          ),	
+                          GET ("D")
+                        ),	
+                        GET("E")
+                      ),
+                      GET("F") 
+                    ),
+                    GET("G")
+                  ),
+                  GET("H")
+                ),
+                GET("I")
+              ),
+              GET("J")
+            ),
+            GET("K")
+          ),
+          GET("L")
+        ),
+        GET("M")
+      ),
+      GET("N")
+    ),
+    GET("O")
+  ),
+  GET("P")
+ )

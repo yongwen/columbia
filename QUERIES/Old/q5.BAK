@@ -1,0 +1,40 @@
+(ORDER_BY(.REV),
+	(PROJECT(.REV, N.NN),
+		(AGG_LIST((<L.LE, L.LD> AS REV), (GROUP_BY N.NN)),
+			(EQJOIN(N.NRK, R.RRK),
+				(EQJOIN(S.SNK, N.NNK),
+					(EQJOIN(<L.LSK, C.CNK>, <S.SSK, S.SNK>),
+						(EQJOIN(O.OOK, L.LOK),
+							(EQJOIN(C.CCK, O.OCK),
+								GET("C"),
+								(SELECT,
+									GET("O"),
+									(OP_AND,
+										(OP_LT,
+											ATTR("O.OD"),
+											INT("1356")
+										),
+										(OP_GE,
+											ATTR("O.OD"),
+											INT("1000")
+										)
+									)
+								)
+							),
+							GET("L")
+						),
+						GET("S")
+					),
+					GET("N")
+				),
+				(SELECT,
+					GET("R"),
+					(OP_EQ,
+						ATTR("R.RN"),
+						STR("SREGION")
+					)
+				)
+			)
+		)
+	)
+)

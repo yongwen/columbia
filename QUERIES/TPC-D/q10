@@ -1,0 +1,35 @@
+(ORDER_BY(.REV),
+	(PROJECT(C.CCK, C.CN, C.C_ACCTBAL, C.CP, N.NN, C.CA, C.C_COMMENT, .REV),
+		(AGG_LIST((<L.LD, L.LE> AS REV), (GROUP_BY <C.CCK, C.CN, C.C_ACCTBAL, C.CP, N.NN, C.CA, C.C_COMMENT>)),
+			(EQJOIN(C.CNK, N.NNK),
+				(EQJOIN(O.OOK, L.LOK),
+					(EQJOIN(C.CCK, O.OCK),
+						GET("C"),
+						(SELECT,
+							GET("O"),
+							(OP_AND,
+								(OP_GE,
+									ATTR("O.OD"),
+									INT("1000")
+								),
+								(OP_LT,
+									ATTR("O.OD"),
+									INT("1090")
+								)
+							)
+						)
+					),
+					(SELECT,
+						GET("L"),
+						(OP_EQ,
+							ATTR("L.LR"),
+							STR("R")
+						)
+					)
+				),
+				GET("N")
+			)
+		)
+	)
+)	
+

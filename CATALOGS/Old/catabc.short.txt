@@ -1,0 +1,17 @@
+//Catalog text file for ABC
+// 05-17-97
+
+RelName: A		// string_t 	
+Card: 4096		// real_t
+UCard: 4096	// real_t
+Width: 0.01		// real_t
+Order: sorted	// Enum: sorted hashed heap
+OrderKey: (X)	// string_tCollection : Collection of Attribute
+CandidateKey: ()
+NumOfAttr: 1	// int_t
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+X 			real_t		4096	    4096	0	    
+
+NumofIndex: 1
+//IndexName(S) 		Attribute (K)		Order (E) 
+A_X                 	(X)		            btree

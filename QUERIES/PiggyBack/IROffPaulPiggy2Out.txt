@@ -1,0 +1,89 @@
+Query: 1
+Optimization beginning time:		12:06:47.473 (hr:min:sec.msec)
+TotalTask : 33
+TotalGroup : 3
+CurrentMExpr : 9
+TotalMExpr : 13
+Duplicate MExpr: 0 
+Hashed Logical MExpr: 4 
+Max Overflow Buckets: 0 
+FiredRules: 13 
+Optimization elapsed time:		00:00:00.020
+========  OPTIMAL PLAN =========
+MERGE_JOIN(<A.X>,<B.X>), Cost =  2.577 
+    QSORTsorted on (A.X)  KeyOrder: (ascending), Cost =  1.916 
+        FILE_SCAN(A), Cost =  0.601 
+    FILE_SCAN(B), Cost =  0.601 
+Rule#	TopMatch	 Bindings	Conditions
+0	2	2	2	GET_TO_FILE_SCAN
+1	0	0	0	SELECT -> FILTER
+2	0	0	0	PROJECT -> P_PROJECT
+3	2	2	0	EQJOIN -> LOOPS_INDEX_JOIN
+4	2	2	2	EQJOIN -> MERGE_JOIN
+5	2	2	2	EQJOIN->LOOPS_JOIN
+6	0	3	3	SORT enforcer
+7	1	1	1	EQJOIN_COMMUTE
+8	1	0	0	EQJOIN_LTOR
+9	0	0	0	EQJOIN_RTOL
+10	0	0	0	EXCHANGE
+11	0	0	0	RM_DUPLICATES  -> HASH_DUPLICATES
+12	0	0	0	AGG_LIST  -> HGROUP_LIST
+13	0	0	0	FUNC_OP  -> P_FUNC_OP
+14	0	0	0	AGGREGATE EQJOIN -> JOIN AGGREGATE
+15	0	0	0	EQJOIN -> BIT_JOIN
+16	0	0	0	SELECT -> INDEXED_FILTER
+17	0	0	0	PROJECT_THRU_SELECT
+18	0	0	0	EQJOIN->HASH_JOIN
+19	0	0	0	DUMMY->PDUMMY
+Query: 2
+Optimization beginning time:		12:06:47.704 (hr:min:sec.msec)
+TotalTask : 454004
+TotalGroup : 511
+CurrentMExpr : 17338
+TotalMExpr : 55235
+Duplicate MExpr: 7112 
+Hashed Logical MExpr: 23262 
+Max Overflow Buckets: 7 
+FiredRules: 56499 
+Optimization elapsed time:		00:00:34.409
+========  OPTIMAL PLAN =========
+LOOPS_JOIN(<F.B,F.X1,F.C>,<E.B,AB.X1,G.C>), Cost =  59.193 
+    FILE_SCAN(F), Cost =  0.601 
+    LOOPS_JOIN(<I.F,AB.W>,<J.F,J.W>), Cost =  55.613 
+        LOOPS_JOIN(<AB.Y>,<C.Y>), Cost =  54.742 
+            FILE_SCAN(AB), Cost =  8.078 
+            LOOPS_JOIN(<G.D>,<H.D>), Cost =  46.395 
+                FILE_SCAN(G), Cost =  0.601 
+                LOOPS_JOIN(<E.A>,<D.A>), Cost =  45.775 
+                    FILE_SCAN(E), Cost =  0.601 
+                    LOOPS_JOIN(<C.Z1,D.A1>,<H.Z1,I.A1>), Cost =  45.154 
+                        MERGE_JOIN(<C.Z>,<D.Z>), Cost =  2.577 
+                            QSORTsorted on (C.Z)  KeyOrder: (ascending), Cost =  1.916 
+                                FILE_SCAN(C), Cost =  0.601 
+                            FILE_SCAN(D), Cost =  0.601 
+                        MERGE_JOIN(<H.E>,<I.E>), Cost =  2.577 
+                            QSORTsorted on (H.E)  KeyOrder: (ascending), Cost =  1.916 
+                                FILE_SCAN(H), Cost =  0.601 
+                            FILE_SCAN(I), Cost =  0.601 
+        FILE_SCAN(J), Cost =  0.601 
+Rule#	TopMatch	 Bindings	Conditions
+0	9	9	9	GET_TO_FILE_SCAN
+1	0	0	0	SELECT -> FILTER
+2	0	0	0	PROJECT -> P_PROJECT
+3	16066	1941	0	EQJOIN -> LOOPS_INDEX_JOIN
+4	15462	15462	15462	EQJOIN -> MERGE_JOIN
+5	16066	16066	16066	EQJOIN->LOOPS_JOIN
+6	0	436	436	SORT enforcer
+7	8033	8033	8033	EQJOIN_COMMUTE
+8	427	7606	7606	EQJOIN_LTOR
+9	0	0	0	EQJOIN_RTOL
+10	0	0	0	EXCHANGE
+11	0	0	0	RM_DUPLICATES  -> HASH_DUPLICATES
+12	0	0	0	AGG_LIST  -> HGROUP_LIST
+13	0	0	0	FUNC_OP  -> P_FUNC_OP
+14	0	0	0	AGGREGATE EQJOIN -> JOIN AGGREGATE
+15	0	0	0	EQJOIN -> BIT_JOIN
+16	0	0	0	SELECT -> INDEXED_FILTER
+17	0	0	0	PROJECT_THRU_SELECT
+18	0	0	0	EQJOIN->HASH_JOIN
+19	0	0	0	DUMMY->PDUMMY

@@ -1,0 +1,111 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 09:50:08 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 09:40: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 523087.384 millisecond
+    Time outside of functions: 503450.294 millisecond
+    Call depth: 3
+    Total functions: 126
+    Total hits: 1480490
+    Function coverage: 66.7%
+    Overhead Calculated 9
+    Overhead Average 9
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 19637.090 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 126
+    Hits in module: 1480490
+    Module function coverage: 66.7%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+    2426.382  12.4     3336.668  17.0    37321 LOOPS_JOIN::~LOOPS_JOIN(void) (physop.obj)
+    1855.844   9.5     1855.844   9.5    37321 LOOPS_JOIN::GetName(void) (physop.obj)
+    1830.307   9.3     1907.523   9.7    34367 MERGE_JOIN::InputReqdProp(class PHYS_PROP *,class LOG_PROP *,int,bool &) (physop.obj)
+    1813.191   9.2     1813.191   9.2    72856 PHYS_OP::~PHYS_OP(void) (physop.obj)
+    1517.429   7.7     1517.429   7.7    32649 MERGE_JOIN::GetName(void) (physop.obj)
+    1512.278   7.7     2333.919  11.9    32649 MERGE_JOIN::~MERGE_JOIN(void) (physop.obj)
+    1340.044   6.8     2566.160  13.1    18660 LOOPS_JOIN::LOOPS_JOIN(class LOOPS_JOIN &) (physop.obj)
+    1140.468   5.8     1140.468   5.8    39903 LOOPS_JOIN::InputReqdProp(class PHYS_PROP *,class LOG_PROP *,int,bool &) (physop.obj)
+     805.137   4.1     1636.142   8.3    16328 MERGE_JOIN::MERGE_JOIN(class MERGE_JOIN &) (physop.obj)
+     688.997   3.5     3022.916  15.4    32649 MERGE_JOIN::`scalar deleting destructor'(unsigned int) (physop.obj)
+     688.997   3.5     3022.916  15.4    32649 MERGE_JOIN::`vector deleting destructor'(unsigned int) (physop.obj)
+     624.578   3.2     2260.720  11.5    16328 MERGE_JOIN::Clone(void) (physop.obj)
+     462.143   2.4      561.503   2.9    36810 LOOPS_JOIN::FindLocalCost(class LOG_PROP *,class LOG_PROP * *) (physop.obj)
+     413.534   2.1      413.534   2.1    73366 PHYS_OP::PHYS_OP(void) (physop.obj)
+     408.650   2.1      508.891   2.6    32130 MERGE_JOIN::FindLocalCost(class LOG_PROP *,class LOG_PROP * *) (physop.obj)
+     227.116   1.2     1168.479   6.0    18661 LOOPS_JOIN::LOOPS_JOIN(int *,int *,int) (physop.obj)
+     223.368   1.1      999.345   5.1    16321 MERGE_JOIN::MERGE_JOIN(int *,int *,int) (physop.obj)
+     193.587   1.0      193.587   1.0    37321 LOOPS_JOIN::operator new(unsigned int) (physop.obj)
+     149.269   0.8      149.269   0.8    68940 CM::cpu_pred(void) (physop.obj)
+     131.755   0.7      131.755   0.7     1937 QSORT::GetName(void) (physop.obj)
+     113.684   0.6      113.684   0.6    37321 LOOPS_JOIN::operator delete(void *,unsigned int) (physop.obj)
+      95.023   0.5       95.023   0.5   127440 PHYS_PROP::GetOrder(void) (physop.obj)
+      82.980   0.4       82.980   0.4     1433 LOOPS_INDEX_JOIN::GetName(void) (physop.obj)
+      77.216   0.4       77.216   0.4    31620 KEYS_SET::Equal(int *,int) (physop.obj)
+      68.397   0.3       68.397   0.3     1414 LOOPS_INDEX_JOIN::InputReqdProp(class PHYS_PROP *,class LOG_PROP *,int,bool &) (physop.obj)
+      64.006   0.3     3514.359  17.9    37321 LOOPS_JOIN::`scalar deleting destructor'(unsigned int) (physop.obj)
+      64.006   0.3     3514.359  17.9    37321 LOOPS_JOIN::`vector deleting destructor'(unsigned int) (physop.obj)
+      62.587   0.3       96.029   0.5     1417 LOOPS_INDEX_JOIN::~LOOPS_INDEX_JOIN(void) (physop.obj)
+      62.545   0.3       67.203   0.3     1406 LOOPS_INDEX_JOIN::FindLocalCost(class LOG_PROP *,class LOG_PROP * *) (physop.obj)
+      55.556   0.3       57.690   0.3      502 TouchCopyCost(class LOG_COLL_PROP *) (physop.obj)
+      50.955   0.3       50.955   0.3    70848 CM::touch_copy(void) (physop.obj)
+      49.340   0.3     2694.734  13.7    18660 LOOPS_JOIN::Clone(void) (physop.obj)
+      36.580   0.2       36.580   0.2    64786 MERGE_JOIN::GetArity(void) (physop.obj)
+      36.252   0.2       80.285   0.4      712 LOOPS_INDEX_JOIN::LOOPS_INDEX_JOIN(class LOOPS_INDEX_JOIN &) (physop.obj)
+      29.532   0.2       29.532   0.2   256477 PHYS_OP::is_physical(void) (physop.obj)
+      28.657   0.1      124.686   0.6     1417 LOOPS_INDEX_JOIN::`scalar deleting destructor'(unsigned int) (physop.obj)
+      28.657   0.1      124.686   0.6     1417 LOOPS_INDEX_JOIN::`vector deleting destructor'(unsigned int) (physop.obj)
+      27.098   0.1      107.383   0.5      712 LOOPS_INDEX_JOIN::Clone(void) (physop.obj)
+      22.898   0.1      131.148   0.7     1411 QSORT::QSORT(void) (physop.obj)
+      20.647   0.1       57.197   0.3     1037 QSORT::`scalar deleting destructor'(unsigned int) (physop.obj)
+      20.647   0.1       57.197   0.3     1037 QSORT::`vector deleting destructor'(unsigned int) (physop.obj)
+      18.081   0.1       18.780   0.1      900 QSORT::FindLocalCost(class LOG_PROP *,class LOG_PROP * *) (physop.obj)
+      13.526   0.1       51.367   0.3      526 QSORT::Clone(void) (physop.obj)
+      11.444   0.1       54.720   0.3      705 LOOPS_INDEX_JOIN::LOOPS_INDEX_JOIN(int *,int *,int,int) (physop.obj)
+       8.149   0.0       37.841   0.2      526 QSORT::QSORT(class QSORT &) (physop.obj)
+       5.992   0.0       53.406   0.3     1427 QSORT::~QSORT(void) (physop.obj)
+       4.553   0.0        4.990   0.0        8 LOOPS_INDEX_JOIN::Dump(void) (physop.obj)
+       3.563   0.0        3.563   0.0    74130 LOOPS_JOIN::GetArity(void) (physop.obj)
+       3.146   0.0        3.146   0.0     2812 CM::index_bf(void) (physop.obj)
+       3.099   0.0        3.099   0.0     2838 LOOPS_INDEX_JOIN::GetArity(void) (physop.obj)
+       2.817   0.0        4.199   0.0       10 FILE_SCAN::FILE_SCAN(int) (physop.obj)
+       1.281   0.0        1.425   0.0      510 QSORT::InputReqdProp(class PHYS_PROP *,class LOG_PROP *,int,bool &) (physop.obj)
+       1.051   0.0        1.051   0.0     1424 CM::cpu_read(void) (physop.obj)
+       1.038   0.0        1.038   0.0     1562 QSORT::GetArity(void) (physop.obj)
+       1.022   0.0        1.022   0.0       18 FILE_SCAN::FindLocalCost(class LOG_PROP *,class LOG_PROP * *) (physop.obj)
+       1.012   0.0        1.012   0.0     1406 CM::index_probe(void) (physop.obj)
+       0.833   0.0        0.833   0.0        9 FILE_SCAN::FindPhysProp(class PHYS_PROP * *) (physop.obj)
+       0.817   0.0        0.817   0.0     2797 SCHEMA::GetTableNum(void) (physop.obj)
+       0.745   0.0        1.205   0.0       35 FILE_SCAN::`scalar deleting destructor'(unsigned int) (physop.obj)
+       0.745   0.0        1.205   0.0       35 FILE_SCAN::`vector deleting destructor'(unsigned int) (physop.obj)
+       0.699   0.0        0.699   0.0      900 CM::cpu_comp_move(void) (physop.obj)
+       0.544   0.0        0.544   0.0        1 P_PROJECT::GetName(void) (physop.obj)
+       0.539   0.0        0.899   0.0       25 FILE_SCAN::Clone(void) (physop.obj)
+       0.530   0.0        1.079   0.0        1 P_PROJECT::P_PROJECT(int *,int) (physop.obj)
+       0.486   0.0        0.486   0.0       12 FILE_SCAN::GetName(void) (physop.obj)
+       0.282   0.0        0.360   0.0       25 FILE_SCAN::FILE_SCAN(class FILE_SCAN &) (physop.obj)
+       0.187   0.0        0.244   0.0        1 FILE_SCAN::Dump(void) (physop.obj)
+       0.142   0.0        0.142   0.0     2830 CM::io(void) (physop.obj)
+       0.135   0.0        0.460   0.0       35 FILE_SCAN::~FILE_SCAN(void) (physop.obj)
+       0.073   0.0        0.105   0.0        1 INDEXED_FILTER::INDEXED_FILTER(int) (physop.obj)
+       0.033   0.0        0.033   0.0        1 BIT_JOIN::GetName(void) (physop.obj)
+       0.030   0.0        0.030   0.0        1 INDEXED_FILTER::GetName(void) (physop.obj)
+       0.020   0.0        0.057   0.0        1 BIT_JOIN::`scalar deleting destructor'(unsigned int) (physop.obj)
+       0.020   0.0        0.057   0.0        1 BIT_JOIN::`vector deleting destructor'(unsigned int) (physop.obj)
+       0.020   0.0        0.053   0.0        1 P_PROJECT::`scalar deleting destructor'(unsigned int) (physop.obj)
+       0.020   0.0        0.053   0.0        1 P_PROJECT::`vector deleting destructor'(unsigned int) (physop.obj)
+       0.018   0.0        0.045   0.0        1 INDEXED_FILTER::`scalar deleting destructor'(unsigned int) (physop.obj)
+       0.018   0.0        0.045   0.0        1 INDEXED_FILTER::`vector deleting destructor'(unsigned int) (physop.obj)
+       0.014   0.0        0.051   0.0        1 BIT_JOIN::BIT_JOIN(int *,int *,int,int) (physop.obj)
+       0.013   0.0        0.037   0.0        1 BIT_JOIN::~BIT_JOIN(void) (physop.obj)
+       0.009   0.0        0.033   0.0        1 P_PROJECT::~P_PROJECT(void) (physop.obj)
+       0.005   0.0        0.028   0.0        1 INDEXED_FILTER::~INDEXED_FILTER(void) (physop.obj)
+       0.000   0.0        0.000   0.0       69 FILE_SCAN::GetArity(void) (physop.obj)
+       0.000   0.0        0.000   0.0       25 FILE_SCAN::GetFileId(void) (physop.obj)

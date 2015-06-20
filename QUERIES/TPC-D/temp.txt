@@ -1,0 +1,16 @@
+(ORDER_BY (<L.LR, L.LLS>), 
+   (PROJECT (.SQTY, .SBP, .SDP, .SCH, .AQTY, .APR, .ADISC, .CONT, L.LR, L.LLS),
+	( AGG_LIST ((L.LQ AS SQTY, L.LE AS SBP, <L.LE, L.LD> AS SDP, <L.LE, L.LD, L.LT> AS SCH, 
+		     L.LQ AS AQTY, L.LE AS APR, L.LD AS ADISC, <L.LOK, L.LPK, L.LSK, L.LN, L.LQ,
+		     L.LE, L.LD, L.LT, L.LR, L.LLS, L.LSD, L.LCD, L.LRD, L.LSM, 
+		     L.LSI> AS CONT), (GROUP_BY <L.LR, L.LLS>)),
+		(SELECT,
+			GET("L"),
+			(OP_LE,
+				ATTR ("L.LSD"),
+				INT("2525")
+			)
+		)
+	)
+   )
+)

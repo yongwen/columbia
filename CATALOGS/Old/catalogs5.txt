@@ -1,0 +1,71 @@
+//Catalog text file for Star queries
+// 1 Jan 98
+
+RelName: A              // SUN
+Card: 100000            // real_t
+UCard: 100000   // real_t
+Width: 0.01             // real_t
+Order: sorted   // Enum: sorted hashed heap    
+OrderKey: (A)   // string_tCollection : Collection of Attribute
+NumOfAttr: 5    // int_t
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+A               real_t          100000    100000        0           //Measure
+B               string_t        10000                               //Foreig key for B
+C           string_t    1000
+D               real_t          100
+E               string_t        10
+NumofIndex: 0
+//IndexName(S)          Attribute (K)           Order (E)
+//A_X                   (X)                         btree
+
+RelName: B
+Card: 10000
+UCard: 10000
+Width: 0.01
+Order: hashed
+OrderKey: (B)
+NumOfAttr: 1      
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+B           string_t            10000
+NumofIndex: 0
+//IndexName(S)  Attribute (K)   Order (E)
+//B_B               (B)             hash
+
+RelName: C
+Card: 1000
+UCard: 1000
+Width: 0.01
+Order: hashed
+OrderKey: (C)
+NumOfAttr: 1
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+C           real_t              1000
+NumofIndex: 0
+//IndexName(S)  Attribute (K)   Order (E)
+//C_C             (C)               hash     
+
+RelName: D
+Card: 100
+UCard: 100
+Width: 0.01
+Order: sorted
+OrderKey: (D)
+NumOfAttr: 1
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+D           real_t      100
+NumofIndex: 0
+//IndexName(S)  Attribute (K)   Order (E)
+//D_D             (D)               btree
+
+RelName: E
+Card: 10
+UCard: 10
+Width: 0.01
+Order: sorted
+OrderKey: (E)
+NumOfAttr: 1          
+//Name(S)   Type(E)     UCard(D)    Max(D)  Min(D)  Comment
+E           real_t      10
+NumofIndex: 0
+//IndexName(S)  Attribute (K)   Order (E)
+//E_E             (E)               btree  

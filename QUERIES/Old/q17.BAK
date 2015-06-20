@@ -1,0 +1,46 @@
+(PROJECT(.AVG_YEARLY),
+	(AGG_LIST((L.LE AS AVG_YEARLY), (GROUP_BY <>)),
+		(SELECT,
+			(EQJOIN(P.PPK, L.LPK),
+				(EQJOIN(L.LPK, P.PPK),
+					GET("L"),
+					(SELECT,
+						GET("P"),
+						(OP_AND,
+							(OP_EQ,
+								ATTR("P.PB"),
+								STR("SBRAND")
+							),
+							(OP_EQ,
+								ATTR("P.PC"),
+								STR("SCON")
+							)
+						)
+					)
+				),
+				(AGG_LIST((L.LQ AS LQUANTITY), (GROUP_BY L.LPK)),
+					(EQJOIN(L.LPK, P.PPK),
+						GET("L"),
+						(SELECT,
+							GET("P"),
+							(OP_AND,
+								(OP_EQ,
+									ATTR("P.PB"),
+									STR("SBRAND")
+								),
+								(OP_EQ,
+									ATTR("P.PC"),
+									STR("SCON")
+								)
+							)
+						)
+					)
+				)
+			),
+			(OP_LT,
+				ATTR("L.LQ"),
+				ATTR(".LQUANTITY")
+			)
+		)
+	)
+)

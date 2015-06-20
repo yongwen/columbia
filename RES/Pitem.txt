@@ -1,0 +1,44 @@
+Profile: Function timing, sorted by time
+Date:    Mon Aug 24 10:06:47 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Aug 24 09:55: "F:\ZHANGYU\wcol\Debug\Wcol" 
+    Total time: 611677.746 millisecond
+    Time outside of functions: 601784.785 millisecond
+    Call depth: 3
+    Total functions: 50
+    Total hits: 2032880
+    Function coverage: 34.0%
+    Overhead Calculated 9
+    Overhead Average 9
+
+Module Statistics for wcol.exe
+------------------------------
+    Time in module: 9892.961 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 50
+    Hits in module: 2032880
+    Module function coverage: 34.0%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+    7270.062  73.5     7270.062  73.5   427749 OP::~OP(void) (item.obj)
+    1203.425  12.2     1203.425  12.2   429279 OP::OP(void) (item.obj)
+     386.207   3.9      428.259   4.3     7600 CArray<int,int>::Copy(class CArray<int,int> const &) (item.obj)
+     290.977   2.9      290.977   2.9   505324 OP::is_leaf(void) (item.obj)
+     136.783   1.4      136.783   1.4   108609 OP::is_logical(void) (item.obj)
+     135.996   1.4      135.996   1.4    76195 OP::is_item(void) (item.obj)
+     134.281   1.4      210.315   2.1   117015 CArray<int,int>::operator[](int) (item.obj)
+      86.140   0.9      110.174   1.1    63785 KEYS_SET::GetSize(void) (item.obj)
+      76.035   0.8       76.035   0.8   117015 CArray<int,int>::ElementAt(int) (item.obj)
+      51.482   0.5      479.741   4.8     7600 KEYS_SET::KEYS_SET(class KEYS_SET &) (item.obj)
+      47.520   0.5       47.520   0.5   111537 CArray<int,int>::GetSize(void) (item.obj)
+      42.051   0.4       42.051   0.4     7600 CopyElements(int *,int const *,int) (item.obj)
+      19.582   0.2       58.654   0.6    23018 KEYS_SET::operator[](int) (item.obj)
+      10.671   0.1       10.671   0.1    29030 OP::is_physical(void) (item.obj)
+       0.722   0.0        0.722   0.0      511 LOG_PROP::~LOG_PROP(void) (item.obj)
+       0.627   0.0        1.525   0.0      502 KEYS_SET::Merge(class KEYS_SET &) (item.obj)
+       0.399   0.0        0.399   0.0      511 LOG_PROP::LOG_PROP(void) (item.obj)

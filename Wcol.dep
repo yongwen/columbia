@@ -1,0 +1,11 @@
+# Microsoft Developer Studio Generated Dependency File, included by Wcol.mak
+
+.\query.cpp : \
+	".\defs.h"\
+	".\item.h"\
+	".\logop.h"\
+	".\op.h"\
+	".\query.h"\
+	".\supp.h"\
+	".\wcol.h"\
+	
