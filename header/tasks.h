@@ -15,7 +15,7 @@ TASKS.H - OPTIMIZATION USING TASKS
 #include "ssp.h"
 #include "rules.h"
 
-class TASKS;		//Abstract class for all task classes
+class TASK;		//Abstract class for all task classes
 class PTASKS;		//Pending tasks - some structure which contains all tasks waiting to execute
 class O_GROUP;		//Optimize a GROUP - find the cheapest plan in the group satisfying a context
 class O_EXPR;		//Optimize an EXPR - Fire all relevant rules for this expression
